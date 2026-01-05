@@ -21,10 +21,10 @@ export function FAQ() {
               className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden transition-all duration-200 hover:border-primary-300"
             >
               <button
-                className="w-full px-6 py-5 text-left flex items-center justify-between"
+                className="w-full px-4 md:px-6 py-4 md:py-5 text-left flex items-center justify-between"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="text-lg font-semibold text-gray-800 pr-4">
+                <span className="text-base md:text-lg font-semibold text-gray-800 pr-4">
                   {item.question}
                 </span>
                 <svg
@@ -47,8 +47,8 @@ export function FAQ() {
                   openIndex === index ? "max-h-96" : "max-h-0"
                 }`}
               >
-                <div className="px-6 pb-5">
-                  <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                <div className="px-4 md:px-6 pb-4 md:pb-5">
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">{item.answer}</p>
                 </div>
               </div>
             </div>

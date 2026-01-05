@@ -15,23 +15,23 @@ export function Pricing() {
           </p>
         </div>
 
-        <Card variant="gradient" className="mb-8">
+        <Card variant="gradient" className="mb-6 md:mb-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
               {pricing.model.title}
             </h3>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8">
               {pricing.model.description}
             </p>
 
             {/* Pricing display */}
-            <div className="bg-white/50 rounded-2xl p-8 max-w-md mx-auto">
+            <div className="bg-white/50 rounded-2xl p-6 md:p-8 max-w-md mx-auto">
               <div className="text-center">
-                <p className="text-gray-600 text-lg mb-4">スタート価格</p>
-                <p className="text-5xl md:text-6xl font-bold text-primary-500 mb-2">
+                <p className="text-gray-600 text-base md:text-lg mb-4">スタート価格</p>
+                <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary-500 mb-2">
                   {pricing.model.startingPrice}
                 </p>
-                <p className="text-gray-500">少額から始められる、安心の料金設定</p>
+                <p className="text-sm md:text-base text-gray-500">少額から始められる、安心の料金設定</p>
               </div>
             </div>
           </div>

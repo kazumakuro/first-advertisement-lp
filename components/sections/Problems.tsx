@@ -16,13 +16,13 @@ export function Problems() {
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {problems.items.map((problem, index) => (
             <Card key={index} hover className="group">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 text-5xl">{problem.icon}</div>
+              <div className="flex items-start gap-3 md:gap-4">
+                <div className="flex-shrink-0 text-4xl md:text-5xl">{problem.icon}</div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-500 transition-colors">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3 group-hover:text-primary-500 transition-colors">
                     {problem.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                     {problem.description}
                   </p>
                 </div>

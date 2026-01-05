@@ -17,18 +17,18 @@ export function HowItWorks() {
             {howItWorks.steps.map((step) => (
               <div key={step.number} className="flex flex-col items-center">
                 {/* Step number circle */}
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary-400 to-secondary-400 flex items-center justify-center text-white text-3xl font-bold mb-6 shadow-lg">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary-400 to-secondary-400 flex items-center justify-center text-white text-2xl md:text-3xl font-bold mb-4 md:mb-6 shadow-lg">
                   {step.number}
                 </div>
 
                 {/* Icon */}
-                <div className="text-6xl mb-6">{step.icon}</div>
+                <div className="text-5xl md:text-6xl mb-4 md:mb-6">{step.icon}</div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-3 md:mb-4 text-center">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 text-center leading-relaxed">
+                <p className="text-sm md:text-base text-gray-600 text-center leading-relaxed">
                   {step.description}
                 </p>
               </div>

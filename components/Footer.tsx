@@ -32,14 +32,14 @@ export function Footer() {
 
   return (
     <footer className="bg-gray-800 text-gray-300">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-white text-2xl font-bold mb-4">
+            <h3 className="text-white text-xl md:text-2xl font-bold mb-3 md:mb-4">
               {siteConfig.name}
             </h3>
-            <p className="text-sm leading-relaxed">
+            <p className="text-xs md:text-sm leading-relaxed">
               {siteConfig.description}
             </p>
           </div>
@@ -47,13 +47,13 @@ export function Footer() {
           {/* Links */}
           {Object.entries(footerLinks).map(([key, section]) => (
             <div key={key}>
-              <h4 className="text-white font-semibold mb-4">{section.title}</h4>
+              <h4 className="text-white font-semibold mb-3 md:mb-4 text-sm md:text-base">{section.title}</h4>
               <ul className="space-y-2">
                 {section.links.map((link, index) => (
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-sm hover:text-primary-300 transition-colors"
+                      className="text-xs md:text-sm hover:text-primary-300 transition-colors"
                     >
                       {link.label}
                     </a>
@@ -65,7 +65,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-gray-700 pt-8 text-center text-sm">
+        <div className="border-t border-gray-700 pt-6 md:pt-8 text-center text-xs md:text-sm">
           <p>
             &copy; {currentYear} {siteConfig.name}. All rights reserved.
           </p>

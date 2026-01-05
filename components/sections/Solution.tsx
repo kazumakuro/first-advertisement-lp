@@ -23,13 +23,13 @@ export function Solution() {
               hover
               className="text-center group"
             >
-              <div className="text-6xl mb-6 group-hover:scale-110 transition-transform">
+              <div className="text-5xl md:text-6xl mb-4 md:mb-6 group-hover:scale-110 transition-transform">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">
+              <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-3 md:mb-4">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                 {feature.description}
               </p>
             </Card>

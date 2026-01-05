@@ -13,7 +13,7 @@ export function Card({
   variant = "default",
   hover = false,
 }: CardProps) {
-  const baseStyles = "rounded-3xl p-6 transition-all duration-300";
+  const baseStyles = "rounded-2xl md:rounded-3xl p-4 md:p-6 transition-all duration-300";
 
   const variants = {
     default: "bg-white shadow-md",

@@ -18,13 +18,13 @@ export function TargetAudience() {
               hover
               className="text-center group"
             >
-              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+              <div className="text-4xl md:text-5xl mb-3 md:mb-4 group-hover:scale-110 transition-transform">
                 {audience.icon}
               </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-3">
+              <h3 className="text-base md:text-lg font-bold text-gray-800 mb-2 md:mb-3">
                 {audience.title}
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
                 {audience.description}
               </p>
             </Card>

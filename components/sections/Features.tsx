@@ -15,24 +15,24 @@ export function Features() {
             <Card key={index} variant="gradient" hover className="group">
               <div className="flex flex-col h-full">
                 {/* Icon */}
-                <div className="text-6xl mb-6 group-hover:scale-110 transition-transform">
+                <div className="text-5xl md:text-6xl mb-4 md:mb-6 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
 
                 {/* Title & Description */}
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6 leading-relaxed">
                   {feature.description}
                 </p>
 
                 {/* Details list */}
                 <ul className="space-y-2 mt-auto">
                   {feature.details.map((detail, i) => (
-                    <li key={i} className="flex items-center text-gray-700">
+                    <li key={i} className="flex items-center text-gray-700 text-sm md:text-base">
                       <svg
-                        className="w-5 h-5 text-accent-500 mr-2 flex-shrink-0"
+                        className="w-4 h-4 md:w-5 md:h-5 text-accent-500 mr-2 flex-shrink-0"
                         fill="none"
                         strokeLinecap="round"
                         strokeLinejoin="round"

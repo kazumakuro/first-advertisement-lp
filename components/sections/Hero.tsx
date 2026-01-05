@@ -22,7 +22,7 @@ export function Hero() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left content */}
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4 md:mb-6 leading-tight">
               {hero.catchphrase.split("\n").map((line, i) => (
                 <span key={i} className="block">
                   {line}
@@ -30,11 +30,11 @@ export function Hero() {
               ))}
             </h1>
 
-            <p className="text-2xl md:text-3xl text-primary-500 font-semibold mb-8">
+            <p className="text-xl sm:text-2xl md:text-3xl text-primary-500 font-semibold mb-6 md:mb-8">
               {hero.subCatchphrase}
             </p>
 
-            <p className="text-lg md:text-xl text-gray-600 mb-10 whitespace-pre-line">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 md:mb-10 whitespace-pre-line">
               {hero.description}
             </p>
 
@@ -57,8 +57,8 @@ export function Hero() {
           </div>
 
           {/* Right image */}
-          <div className="flex-1 flex justify-center">
-            <div className="relative w-full max-w-md aspect-square">
+          <div className="flex-1 flex justify-center w-full lg:w-auto">
+            <div className="relative w-full max-w-[280px] sm:max-w-sm md:max-w-md aspect-square">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-300/20 via-secondary-300/20 to-accent-300/20 rounded-full blur-2xl" />
               <Image
                 src="/assets/images/Gemini_Generated_Image_639l0x639l0x639l.png"
