@@ -23,9 +23,8 @@ export function Footer() {
     social: {
       title: "SNS",
       links: [
-        { label: "Twitter", href: "#" },
-        { label: "Instagram", href: "#" },
-        { label: "Facebook", href: "#" },
+        { label: "X", href: "https://x.com/contact_first_1" },
+        { label: "Instagram", href: "https://www.instagram.com/first.advertisement/" },
       ],
     },
   };
@@ -54,6 +53,7 @@ export function Footer() {
                     <a
                       href={link.href}
                       className="text-xs md:text-sm hover:text-primary-300 transition-colors"
+                      {...(key === 'social' && { target: "_blank", rel: "noopener noreferrer" })}
                     >
                       {link.label}
                     </a>

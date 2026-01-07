@@ -28,7 +28,11 @@ export function CTA() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="primary" size="lg">
+              <Button
+                variant="primary"
+                size="lg"
+                onClick={() => window.open(cta.primaryUrl, "_blank")}
+              >
                 {cta.primary}
               </Button>
               <Button variant="outline" size="lg">

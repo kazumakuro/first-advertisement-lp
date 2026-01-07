@@ -42,7 +42,7 @@ export function Hero() {
               <Button
                 variant="primary"
                 size="lg"
-                onClick={() => scrollToSection("cta")}
+                onClick={() => window.open(hero.cta.primaryUrl, "_blank")}
               >
                 {hero.cta.primary}
               </Button>

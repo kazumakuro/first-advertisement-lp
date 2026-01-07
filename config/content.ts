@@ -11,6 +11,7 @@ export const hero = {
     "ハンドメイド作家、イラストレーター、教室運営者。\n「広告は難しい・高い・怖い」と感じているあなたに。",
   cta: {
     primary: "無料で相談してみる",
+    primaryUrl: "https://lin.ee/KfW1iSd",
     secondary: "サービスを詳しく見る",
   },
 };
@@ -242,5 +243,6 @@ export const cta = {
   title: "あなたの活動を、もっと広げよう。",
   subtitle: "はじめての広告、ここから始めませんか？",
   primary: "無料で相談してみる",
+  primaryUrl: "https://lin.ee/KfW1iSd",
   secondary: "資料をダウンロード",
 };
