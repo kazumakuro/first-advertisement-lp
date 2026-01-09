@@ -10,8 +10,8 @@ export const hero = {
   description:
     "ハンドメイド作家、イラストレーター、教室運営者。\n「広告は難しい・高い・怖い」と感じているあなたに。",
   cta: {
-    primary: "無料で相談してみる",
-    primaryUrl: "https://lin.ee/KfW1iSd",
+    primary: "無料相談を予約する",
+    primaryUrl: "https://app.spirinc.com/patterns/availability-sharing/4OlVU2tYQzywZYYLdHuh1/confirm",
     secondary: "サービスを詳しく見る",
   },
 };
@@ -240,9 +240,15 @@ export const faq = {
 };
 
 export const cta = {
-  title: "あなたの活動を、もっと広げよう。",
-  subtitle: "はじめての広告、ここから始めませんか？",
+  title: "あなたの声を聞かせてください",
+  subtitle: "さまざまなジャンルで集客支援をしてきた担当者が、あなたのお悩みを一緒に考えます。",
+  description: "「こんなサービスがあったらいいな」「この部分がもっとこうだったら」など、率直なご意見をお聞かせください。もちろん、広告や集客のお悩み相談も大歓迎です。",
   primary: "無料で相談してみる",
-  primaryUrl: "https://lin.ee/KfW1iSd",
-  secondary: "資料をダウンロード",
+  primaryUrl: "https://app.spirinc.com/patterns/availability-sharing/4OlVU2tYQzywZYYLdHuh1/confirm",
+  secondary: "サービス詳細を見る",
+  benefits: [
+    "予約は30秒で完了",
+    "オンラインで気軽に相談",
+    "売り込みは一切なし",
+  ],
 };
