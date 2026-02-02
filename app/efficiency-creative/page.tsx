@@ -3,6 +3,7 @@ import { HeroEfficiency } from "@/components/sections/efficiency/HeroEfficiency"
 import { ProblemsEfficiency } from "@/components/sections/efficiency/ProblemsEfficiency";
 import { SolutionEfficiency } from "@/components/sections/efficiency/SolutionEfficiency";
 import { FeaturesEfficiency } from "@/components/sections/efficiency/FeaturesEfficiency";
+import { PortfolioEfficiency } from "@/components/sections/efficiency/PortfolioEfficiency";
 import { HowItWorksEfficiency } from "@/components/sections/efficiency/HowItWorksEfficiency";
 import { PricingEfficiency } from "@/components/sections/efficiency/PricingEfficiency";
 import { FAQEfficiency } from "@/components/sections/efficiency/FAQEfficiency";
@@ -25,12 +26,13 @@ export const metadata: Metadata = {
  * 2. ProblemsEfficiency - 問題提起（共感）
  * 3. SolutionEfficiency - ソリューション（ベネフィット）
  * 4. FeaturesEfficiency - 強み・特徴（サービス説明）
- * 5. HowItWorksEfficiency - 利用の流れ
+ * 5. PortfolioEfficiency - 制作事例（Instagram）
+ * 6. HowItWorksEfficiency - 利用の流れ
  *
  * 【クロージング】
- * 6. PricingEfficiency - 料金プラン
- * 7. FAQEfficiency - よくある質問
- * 8. CTAEfficiency - 最終CTA
+ * 7. PricingEfficiency - 料金プラン
+ * 8. FAQEfficiency - よくある質問
+ * 9. CTAEfficiency - 最終CTA
  */
 export default function EfficiencyCreativePage() {
   return (
@@ -39,10 +41,11 @@ export default function EfficiencyCreativePage() {
         {/* ファーストビュー */}
         <HeroEfficiency />
 
-        {/* ボディ: 問題提起 → ソリューション → 強み・特徴 → 流れ */}
+        {/* ボディ: 問題提起 → ソリューション → 強み・特徴 → 事例 → 流れ */}
         <ProblemsEfficiency />
         <SolutionEfficiency />
         <FeaturesEfficiency />
+        <PortfolioEfficiency />
         <HowItWorksEfficiency />
 
         {/* クロージング */}

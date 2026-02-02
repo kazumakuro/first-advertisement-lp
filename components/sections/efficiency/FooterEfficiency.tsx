@@ -11,8 +11,8 @@ export function FooterEfficiency() {
       links: [
         { label: "課題", href: "#problems" },
         { label: "特徴", href: "#features" },
+        { label: "制作事例", href: "#portfolio" },
         { label: "料金プラン", href: "#pricing" },
-        { label: "FAQ", href: "#faq" },
       ],
     },
     company: {
