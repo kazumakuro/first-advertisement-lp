@@ -5,7 +5,6 @@ import { Problems } from "@/components/sections/Problems";
 import { Solution } from "@/components/sections/Solution";
 import { Features } from "@/components/sections/Features";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { TargetAudience } from "@/components/sections/TargetAudience";
 import { Pricing } from "@/components/sections/Pricing";
 import { FAQ } from "@/components/sections/FAQ";
@@ -29,13 +28,12 @@ export const metadata: Metadata = {
  * 3. Solution - ベネフィット（解決策）
  * 4. Features - サービス説明
  * 5. HowItWorks - 利用の流れ
- * 6. Testimonials - お客様の声・実績（社会的証明）
- * 7. TargetAudience - こんな方に
+ * 6. TargetAudience - こんな方に
  *
  * 【クロージング】
- * 8. Pricing - 料金
- * 9. FAQ - よくある質問
- * 10. CTA - 最終CTA
+ * 7. Pricing - 料金
+ * 8. FAQ - よくある質問
+ * 9. CTA - 最終CTA
  */
 export default function EasyPublishPage() {
   return (
@@ -50,7 +48,6 @@ export default function EasyPublishPage() {
         <Solution />
         <Features />
         <HowItWorks />
-        <Testimonials />
         <TargetAudience />
 
         {/* クロージング */}
