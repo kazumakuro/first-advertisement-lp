@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { HeroEfficiency } from "@/components/sections/efficiency/HeroEfficiency";
 import { CostSavings } from "@/components/sections/efficiency/CostSavings";
-import { CaseStudies } from "@/components/sections/efficiency/CaseStudies";
 import { ComparisonTable } from "@/components/sections/efficiency/ComparisonTable";
 import { CreativeShowcase } from "@/components/sections/efficiency/CreativeShowcase";
 import { ProcessEfficiency } from "@/components/sections/efficiency/ProcessEfficiency";
@@ -24,15 +23,14 @@ export const metadata: Metadata = {
  *
  * 【ボディ】
  * 2. CostSavings - 共感 + ベネフィット（ROI可視化）
- * 3. CaseStudies - 実績・事例（社会的証明）※早めに配置で信頼性UP
- * 4. ComparisonTable - 差別化（従来比較）
- * 5. CreativeShowcase - サービス詳細
- * 6. ProcessEfficiency - 利用の流れ
+ * 3. ComparisonTable - 差別化（従来比較）
+ * 4. CreativeShowcase - サービス詳細
+ * 5. ProcessEfficiency - 利用の流れ
  *
  * 【クロージング】
- * 7. PricingEfficiency - 料金プラン
- * 8. FAQEfficiency - よくある質問
- * 9. CTAEfficiency - 最終CTA
+ * 6. PricingEfficiency - 料金プラン
+ * 7. FAQEfficiency - よくある質問
+ * 8. CTAEfficiency - 最終CTA
  */
 export default function EfficiencyCreativePage() {
   return (
@@ -41,9 +39,8 @@ export default function EfficiencyCreativePage() {
         {/* ファーストビュー */}
         <HeroEfficiency />
 
-        {/* ボディ: 共感+ベネフィット → 実績 → 差別化 → サービス詳細 → 流れ */}
+        {/* ボディ: 共感+ベネフィット → 差別化 → サービス詳細 → 流れ */}
         <CostSavings />
-        <CaseStudies />
         <ComparisonTable />
         <CreativeShowcase />
         <ProcessEfficiency />
