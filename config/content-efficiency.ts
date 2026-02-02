@@ -138,40 +138,6 @@ export const process = {
   ],
 };
 
-export const caseStudies = {
-  title: "導入実績",
-  subtitle: "数字で見る効率化の成果",
-  cases: [
-    {
-      industry: "EC・通販",
-      companyType: "アパレルD2Cブランド",
-      metrics: [
-        { label: "制作費削減", value: "-52%", description: "月15万円→7万円" },
-        { label: "広告費増加", value: "+40%", description: "削減分を転用" },
-        { label: "売上向上", value: "+35%", description: "3ヶ月後" },
-      ],
-    },
-    {
-      industry: "サービス",
-      companyType: "オンラインスクール",
-      metrics: [
-        { label: "制作期間短縮", value: "-80%", description: "10日→2日" },
-        { label: "クリエイティブ数", value: "3x", description: "月間制作本数" },
-        { label: "CPA改善", value: "-25%", description: "獲得単価" },
-      ],
-    },
-    {
-      industry: "店舗",
-      companyType: "飲食チェーン（5店舗）",
-      metrics: [
-        { label: "運用工数削減", value: "-60%", description: "週8h→3h" },
-        { label: "来店数増加", value: "+28%", description: "広告経由" },
-        { label: "月次ROI", value: "+45%", description: "投資対効果" },
-      ],
-    },
-  ],
-};
-
 export const pricing = {
   title: "料金プラン",
   subtitle: "運用規模に応じた、明確な料金体系",
