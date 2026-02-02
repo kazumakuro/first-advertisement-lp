@@ -26,7 +26,12 @@ const comparisonData = {
   savings: {
     amount: 300000,
     percentage: 60,
-    message: "削減分を広告費に回せる",
+  },
+  // 売上増加シミュレーション
+  salesImpact: {
+    roas: 300, // ROAS 300%
+    additionalAdSpend: 300000, // 削減分をそのまま広告費に
+    expectedSalesIncrease: 900000, // 30万 × 3 = 90万
   },
 };
 
@@ -152,32 +157,72 @@ export function CostComparisonEfficiency() {
           </div>
         </div>
 
-        {/* 削減効果サマリー */}
-        <div className="bg-gradient-to-r from-neon-500/20 to-electric-500/20 border border-neon-500/30 p-6 md:p-8 text-center">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-            <div>
-              <p className="text-gray-400 text-sm mb-1">月間削減額</p>
-              <p className="text-3xl md:text-4xl font-bold font-mono text-neon-500">
-                ¥{comparisonData.savings.amount.toLocaleString()}
+        {/* 売上増加シミュレーション - フロー図 */}
+        <div className="bg-gradient-to-r from-neon-500/10 to-electric-500/10 border border-white/10 p-6 md:p-8">
+          <h3 className="text-xl md:text-2xl font-bold text-white text-center mb-8">
+            削減分を広告費に回すと...
+          </h3>
+
+          {/* フロー図 */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-2">
+            {/* Step 1: 削減額 */}
+            <div className="bg-white/5 border border-white/20 p-4 md:p-6 text-center min-w-[140px]">
+              <p className="text-gray-400 text-xs mb-1">制作費削減</p>
+              <p className="text-2xl md:text-3xl font-bold font-mono text-white">
+                ¥{(comparisonData.savings.amount / 10000).toLocaleString()}万
               </p>
+              <p className="text-gray-500 text-xs mt-1">/月</p>
             </div>
-            <div className="hidden md:block w-px h-16 bg-white/20" />
-            <div>
-              <p className="text-gray-400 text-sm mb-1">削減率</p>
-              <p className="text-3xl md:text-4xl font-bold font-mono text-neon-500">
-                {comparisonData.savings.percentage}%
+
+            {/* Arrow */}
+            <div className="text-electric-500 text-2xl md:text-3xl rotate-90 md:rotate-0">→</div>
+
+            {/* Step 2: 広告費に追加 */}
+            <div className="bg-electric-500/10 border border-electric-500/30 p-4 md:p-6 text-center min-w-[140px]">
+              <p className="text-electric-400 text-xs mb-1">広告費に追加</p>
+              <p className="text-2xl md:text-3xl font-bold font-mono text-electric-500">
+                +¥{(comparisonData.salesImpact.additionalAdSpend / 10000).toLocaleString()}万
               </p>
+              <p className="text-gray-500 text-xs mt-1">/月</p>
             </div>
-            <div className="hidden md:block w-px h-16 bg-white/20" />
-            <div>
-              <p className="text-gray-400 text-sm mb-1">年間削減額</p>
-              <p className="text-3xl md:text-4xl font-bold font-mono text-neon-500">
-                ¥{(comparisonData.savings.amount * 12).toLocaleString()}
+
+            {/* Arrow with ROAS */}
+            <div className="flex flex-col items-center text-neon-500">
+              <span className="text-xs text-gray-400 mb-1">ROAS {comparisonData.salesImpact.roas}%</span>
+              <span className="text-2xl md:text-3xl rotate-90 md:rotate-0">→</span>
+            </div>
+
+            {/* Step 3: 売上増加 */}
+            <div className="bg-gradient-to-br from-neon-500/20 to-electric-500/20 border-2 border-neon-500 p-4 md:p-6 text-center min-w-[140px]">
+              <p className="text-neon-400 text-xs mb-1">売上増加</p>
+              <p className="text-2xl md:text-3xl font-bold font-mono text-neon-500">
+                +¥{(comparisonData.salesImpact.expectedSalesIncrease / 10000).toLocaleString()}万
               </p>
+              <p className="text-gray-500 text-xs mt-1">/月</p>
             </div>
           </div>
-          <p className="text-white mt-6 text-lg">
-            💡 {comparisonData.savings.message}
+
+          {/* 年間インパクト */}
+          <div className="mt-8 pt-6 border-t border-white/10">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-center">
+              <div>
+                <p className="text-gray-400 text-sm">年間の売上増加見込み</p>
+                <p className="text-3xl md:text-4xl font-bold font-mono text-neon-500 mt-1">
+                  +¥{((comparisonData.salesImpact.expectedSalesIncrease * 12) / 10000).toLocaleString()}万
+                </p>
+              </div>
+              <div className="hidden sm:block w-px h-12 bg-white/20" />
+              <div>
+                <p className="text-gray-400 text-sm">コスト削減だけでも年間</p>
+                <p className="text-3xl md:text-4xl font-bold font-mono text-electric-500 mt-1">
+                  ¥{((comparisonData.savings.amount * 12) / 10000).toLocaleString()}万お得
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-gray-500 text-xs text-center mt-6">
+            ※ ROAS {comparisonData.salesImpact.roas}%は一般的なEC広告の平均値を想定。実際の効果は商材や運用状況により異なります。
           </p>
         </div>
       </div>
