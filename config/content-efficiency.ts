@@ -15,7 +15,7 @@ export const hero = {
     { value: "2x", unit: "", label: "ROAS改善" },
   ],
   cta: {
-    primary: "無料で相談する",
+    primary: "無料でお試し作成",
     primaryUrl: "https://lin.ee/gVIckSF",
     secondary: "サービスを詳しく見る",
   },
@@ -228,16 +228,15 @@ export const faq = {
 };
 
 export const cta = {
-  title: "まずは無料で相談",
-  subtitle: "現在の運用状況をヒアリングし、削減可能なコストと期待効果をご提示します",
+  title: "あなたの商品で、試してみませんか？",
+  subtitle: "画像を送るだけで、AIがクリエイティブを無料でお試し作成",
   description:
-    "無料相談では、貴社の広告運用状況を分析し、具体的な改善提案をお伝えします。",
-  primary: "無料で相談する",
+    "公式LINEに商品画像を送信するだけ。どんな広告クリエイティブができるか、まずは体験してみてください。",
+  primary: "LINEで無料お試し",
   primaryUrl: "https://lin.ee/gVIckSF",
-  secondary: "資料をダウンロード",
   benefits: [
-    "相談は完全無料",
-    "オンラインで30分",
-    "具体的な削減額を試算",
+    "画像を送るだけでOK",
+    "お試し作成は完全無料",
+    "最短即日でお届け",
   ],
 };

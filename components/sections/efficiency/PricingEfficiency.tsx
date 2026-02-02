@@ -85,7 +85,7 @@ export function PricingEfficiency() {
                     : "border-2 border-electric-500 text-electric-500 hover:bg-electric-500/10"
                 }`}
               >
-                相談する
+                無料でお試し
               </a>
             </div>
           </div>
