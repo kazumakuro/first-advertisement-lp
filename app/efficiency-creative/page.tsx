@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { HeroEfficiency } from "@/components/sections/efficiency/HeroEfficiency";
 import { ProblemsEfficiency } from "@/components/sections/efficiency/ProblemsEfficiency";
+import { CostComparisonEfficiency } from "@/components/sections/efficiency/CostComparisonEfficiency";
 import { SolutionEfficiency } from "@/components/sections/efficiency/SolutionEfficiency";
 import { FeaturesEfficiency } from "@/components/sections/efficiency/FeaturesEfficiency";
 import { PortfolioEfficiency } from "@/components/sections/efficiency/PortfolioEfficiency";
@@ -41,8 +42,9 @@ export default function EfficiencyCreativePage() {
         {/* ファーストビュー */}
         <HeroEfficiency />
 
-        {/* ボディ: 問題提起 → ソリューション → 強み・特徴 → 事例 → 流れ */}
+        {/* ボディ: 問題提起 → コスト比較 → ソリューション → 強み・特徴 → 事例 → 流れ */}
         <ProblemsEfficiency />
+        <CostComparisonEfficiency />
         <SolutionEfficiency />
         <FeaturesEfficiency />
         <PortfolioEfficiency />
