@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import { HeroEfficiency } from "@/components/sections/efficiency/HeroEfficiency";
 import { CostSavings } from "@/components/sections/efficiency/CostSavings";
+import { CaseStudies } from "@/components/sections/efficiency/CaseStudies";
 import { ComparisonTable } from "@/components/sections/efficiency/ComparisonTable";
 import { CreativeShowcase } from "@/components/sections/efficiency/CreativeShowcase";
 import { ProcessEfficiency } from "@/components/sections/efficiency/ProcessEfficiency";
-import { CaseStudies } from "@/components/sections/efficiency/CaseStudies";
 import { PricingEfficiency } from "@/components/sections/efficiency/PricingEfficiency";
 import { FAQEfficiency } from "@/components/sections/efficiency/FAQEfficiency";
 import { CTAEfficiency } from "@/components/sections/efficiency/CTAEfficiency";
@@ -16,16 +16,39 @@ export const metadata: Metadata = {
     "クリエイティブ費用を半減し、広告費に回せる。既存の広告運用をさらに効率化。制作コスト削減でROAS向上を実現。",
 };
 
+/**
+ * LP構成（鉄板7要素に基づく）
+ *
+ * 【ファーストビュー】
+ * 1. HeroEfficiency - キャッチコピー + 数値インパクト + CTA
+ *
+ * 【ボディ】
+ * 2. CostSavings - 共感 + ベネフィット（ROI可視化）
+ * 3. CaseStudies - 実績・事例（社会的証明）※早めに配置で信頼性UP
+ * 4. ComparisonTable - 差別化（従来比較）
+ * 5. CreativeShowcase - サービス詳細
+ * 6. ProcessEfficiency - 利用の流れ
+ *
+ * 【クロージング】
+ * 7. PricingEfficiency - 料金プラン
+ * 8. FAQEfficiency - よくある質問
+ * 9. CTAEfficiency - 最終CTA
+ */
 export default function EfficiencyCreativePage() {
   return (
     <div className="bg-dark-100 min-h-screen">
       <main>
+        {/* ファーストビュー */}
         <HeroEfficiency />
+
+        {/* ボディ: 共感+ベネフィット → 実績 → 差別化 → サービス詳細 → 流れ */}
         <CostSavings />
+        <CaseStudies />
         <ComparisonTable />
         <CreativeShowcase />
         <ProcessEfficiency />
-        <CaseStudies />
+
+        {/* クロージング */}
         <PricingEfficiency />
         <FAQEfficiency />
         <CTAEfficiency />
