@@ -5,9 +5,12 @@ import { Section } from "@/components/ui/Section";
 
 // 埋め込みたい投稿のURLをここに追加
 const instagramPosts = [
-  "https://www.instagram.com/p/DGe059mysTy/",
-  "https://www.instagram.com/p/DGbmREVS87J/",
-  "https://www.instagram.com/p/DGZJQg6ycTE/",
+  "https://www.instagram.com/p/DUDNsOfkp--/",
+  "https://www.instagram.com/p/DTzribqErym/",
+  "https://www.instagram.com/p/DTzswkCkjFa/",
+  "https://www.instagram.com/p/DUFm9IhEk6d/",
+  "https://www.instagram.com/p/DUC9BVREpip/",
+  "https://www.instagram.com/p/DT0Mmvfkqqz/",
 ];
 
 export function PortfolioEfficiency() {
