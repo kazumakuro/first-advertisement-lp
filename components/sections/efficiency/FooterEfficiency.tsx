@@ -9,8 +9,8 @@ export function FooterEfficiency() {
     service: {
       title: "サービス",
       links: [
-        { label: "コスト削減", href: "#cost-savings" },
-        { label: "導入事例", href: "#case-studies" },
+        { label: "課題", href: "#problems" },
+        { label: "特徴", href: "#features" },
         { label: "料金プラン", href: "#pricing" },
         { label: "FAQ", href: "#faq" },
       ],

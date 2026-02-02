@@ -15,131 +15,143 @@ export const hero = {
     { value: "2x", unit: "", label: "ROAS改善" },
   ],
   cta: {
-    primary: "効果を試算する",
+    primary: "無料で相談する",
     primaryUrl: "https://lin.ee/gVIckSF",
-    secondary: "事例を見る",
+    secondary: "サービスを詳しく見る",
   },
 };
 
-export const costSavings = {
-  title: "制作費削減がROAS向上に直結",
-  subtitle: "削減した制作費を広告費に転用することで、広告効果を最大化",
-  flow: [
+export const problems = {
+  title: "こんな課題、ありませんか？",
+  items: [
     {
-      title: "制作費削減",
-      amount: "月 -15万円",
-      description: "AI生成で外注費カット",
+      title: "クリエイティブ制作費が高すぎる",
+      description:
+        "代理店に依頼すると1本3〜5万円。月に数本作ると、それだけで10万円以上の出費に。",
+      icon: "money",
+    },
+    {
+      title: "制作に時間がかかりすぎる",
+      description:
+        "依頼から納品まで1〜2週間。タイムリーな施策が打てず、機会損失が発生。",
+      icon: "clock",
+    },
+    {
+      title: "修正のたびに追加費用",
+      description:
+        "ちょっとした修正でも追加費用が発生。気軽に改善サイクルを回せない。",
+      icon: "refresh",
+    },
+    {
+      title: "バリエーションが作れない",
+      description:
+        "A/Bテスト用に複数パターン欲しいけど、予算的に1〜2本が限界。最適化が進まない。",
+      icon: "copy",
+    },
+  ],
+};
+
+export const solution = {
+  title: "すべて、解決できます。",
+  subtitle: "AI×自動化で、クリエイティブ制作の常識を変える",
+  features: [
+    {
+      title: "制作費を大幅カット",
+      description: "月額固定で何本でも制作可能。1本あたりのコストを劇的に削減。",
       icon: "scissors",
     },
     {
-      title: "広告費に転用",
-      amount: "月 +15万円",
-      description: "削減分をそのまま運用へ",
-      icon: "arrow-right",
+      title: "最短即日で納品",
+      description: "AIが自動生成するから、依頼から納品まで最短即日。スピード勝負に強い。",
+      icon: "zap",
     },
     {
-      title: "ROAS向上",
-      amount: "+30%",
-      description: "インプレッション増加で売上UP",
-      icon: "trending-up",
-    },
-  ],
-  example: {
-    title: "月間30万円の広告運用の場合",
-    before: {
-      adSpend: 200000,
-      creativeCost: 100000,
-      total: 300000,
-      roas: 150,
-    },
-    after: {
-      adSpend: 250000,
-      creativeCost: 50000,
-      total: 300000,
-      roas: 195,
-    },
-  },
-};
-
-export const comparison = {
-  title: "従来の代理店との比較",
-  subtitle: "同じ予算で、より多くの広告を打てる",
-  headers: ["項目", "従来の代理店", "First Advertisement"],
-  rows: [
-    {
-      item: "クリエイティブ制作",
-      traditional: "1本 3-5万円",
-      ours: "月額固定で無制限",
-    },
-    {
-      item: "制作期間",
-      traditional: "1-2週間",
-      ours: "即日〜翌日",
-    },
-    {
-      item: "修正対応",
-      traditional: "追加費用発生",
-      ours: "何度でも無料",
-    },
-    {
-      item: "バリエーション",
-      traditional: "限定的",
-      ours: "AIで大量生成可能",
-    },
-    {
-      item: "運用レポート",
-      traditional: "月1回",
-      ours: "リアルタイム",
+      title: "修正は何度でも無料",
+      description: "納得いくまで何度でも修正OK。追加費用を気にせず品質を追求。",
+      icon: "check",
     },
   ],
 };
 
-export const showcase = {
-  title: "AI生成クリエイティブ",
-  subtitle: "高品質なクリエイティブを、最短即日で",
-  categories: [
+export const features = {
+  title: "選ばれる4つの理由",
+  items: [
     {
-      name: "静止画広告",
-      description: "SNS・ディスプレイ広告向け",
+      title: "AIクリエイティブ生成",
+      description:
+        "最新のAI技術で、高品質な広告クリエイティブを自動生成。静止画・動画・コピーまで対応。",
+      icon: "sparkles",
+      details: [
+        "静止画・動画自動生成",
+        "コピーライティング込み",
+        "ブランドガイドライン適用",
+      ],
     },
     {
-      name: "動画広告",
-      description: "TikTok・YouTube向け",
+      title: "月額固定で無制限",
+      description:
+        "何本作っても料金は一定。バリエーションを気にせず、思う存分テストできる。",
+      icon: "infinity",
+      details: [
+        "制作本数の上限なし",
+        "修正回数も無制限",
+        "追加費用一切なし",
+      ],
     },
     {
-      name: "バナー広告",
-      description: "各種サイズに最適化",
+      title: "全媒体に対応",
+      description:
+        "Google、Meta、TikTok、LINE、X。主要な広告媒体すべてに最適化したクリエイティブを提供。",
+      icon: "globe",
+      details: [
+        "媒体別サイズ自動調整",
+        "フォーマット最適化",
+        "入稿規定に準拠",
+      ],
+    },
+    {
+      title: "リアルタイム分析",
+      description:
+        "クリエイティブ別の効果を可視化。どの広告が効いているか一目でわかる。",
+      icon: "chart",
+      details: [
+        "媒体横断ダッシュボード",
+        "クリエイティブ別効果測定",
+        "改善提案の自動化",
+      ],
     },
   ],
 };
 
-export const process = {
+export const howItWorks = {
   title: "シンプルな3ステップ",
-  subtitle: "面倒な打ち合わせは不要。すぐに広告配信を開始",
   steps: [
     {
       number: 1,
-      title: "ブリーフ入力",
-      description: "商品情報とターゲットを入力するだけ。テンプレートで簡単。",
-      duration: "5分",
+      title: "ブリーフを入力",
+      description:
+        "商品情報とターゲットを入力するだけ。テンプレートがあるので迷いません。",
+      icon: "edit",
     },
     {
       number: 2,
-      title: "AI生成",
-      description: "複数のクリエイティブバリエーションを自動生成。",
-      duration: "30分",
+      title: "AIが自動生成",
+      description:
+        "複数のクリエイティブバリエーションをAIが自動生成。最短30分で完成。",
+      icon: "cpu",
     },
     {
       number: 3,
       title: "配信開始",
-      description: "審査通過後、すぐに配信。A/Bテストも自動で実施。",
-      duration: "即日",
+      description:
+        "審査通過後、すぐに配信。A/Bテストも自動で実施し、効果を最大化。",
+      icon: "send",
     },
   ],
 };
 
 export const pricing = {
-  title: "料金プラン",
+  title: "シンプルで透明な料金",
   subtitle: "運用規模に応じた、明確な料金体系",
   plans: [
     {
@@ -147,7 +159,7 @@ export const pricing = {
       adSpendRange: "月10-30万円",
       fee: "15%",
       features: [
-        "AI クリエイティブ生成（月10本）",
+        "AIクリエイティブ生成（月10本）",
         "3媒体まで運用",
         "週次レポート",
         "チャットサポート",
@@ -159,7 +171,7 @@ export const pricing = {
       adSpendRange: "月30-100万円",
       fee: "12%",
       features: [
-        "AI クリエイティブ生成（無制限）",
+        "AIクリエイティブ生成（無制限）",
         "全媒体対応",
         "リアルタイムダッシュボード",
         "専任担当者",
@@ -212,16 +224,11 @@ export const faq = {
       answer:
         "Google（検索・ディスプレイ・YouTube）、Meta（Instagram・Facebook）、TikTok、X、LINE、Yahoo!など主要媒体に対応しています。",
     },
-    {
-      question: "レポートはどのように確認できますか？",
-      answer:
-        "リアルタイムダッシュボードで24時間いつでも確認可能。媒体横断でのパフォーマンス分析、クリエイティブ別の効果測定など詳細なデータを提供します。",
-    },
   ],
 };
 
 export const cta = {
-  title: "今すぐ効果を試算する",
+  title: "まずは無料で相談",
   subtitle: "現在の運用状況をヒアリングし、削減可能なコストと期待効果をご提示します",
   description:
     "無料相談では、貴社の広告運用状況を分析し、具体的な改善提案をお伝えします。",

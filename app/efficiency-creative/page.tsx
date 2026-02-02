@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { HeroEfficiency } from "@/components/sections/efficiency/HeroEfficiency";
-import { CostSavings } from "@/components/sections/efficiency/CostSavings";
-import { ComparisonTable } from "@/components/sections/efficiency/ComparisonTable";
-import { CreativeShowcase } from "@/components/sections/efficiency/CreativeShowcase";
-import { ProcessEfficiency } from "@/components/sections/efficiency/ProcessEfficiency";
+import { ProblemsEfficiency } from "@/components/sections/efficiency/ProblemsEfficiency";
+import { SolutionEfficiency } from "@/components/sections/efficiency/SolutionEfficiency";
+import { FeaturesEfficiency } from "@/components/sections/efficiency/FeaturesEfficiency";
+import { HowItWorksEfficiency } from "@/components/sections/efficiency/HowItWorksEfficiency";
 import { PricingEfficiency } from "@/components/sections/efficiency/PricingEfficiency";
 import { FAQEfficiency } from "@/components/sections/efficiency/FAQEfficiency";
 import { CTAEfficiency } from "@/components/sections/efficiency/CTAEfficiency";
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
  * 1. HeroEfficiency - キャッチコピー + 数値インパクト + CTA
  *
  * 【ボディ】
- * 2. CostSavings - 共感 + ベネフィット（ROI可視化）
- * 3. ComparisonTable - 差別化（従来比較）
- * 4. CreativeShowcase - サービス詳細
- * 5. ProcessEfficiency - 利用の流れ
+ * 2. ProblemsEfficiency - 問題提起（共感）
+ * 3. SolutionEfficiency - ソリューション（ベネフィット）
+ * 4. FeaturesEfficiency - 強み・特徴（サービス説明）
+ * 5. HowItWorksEfficiency - 利用の流れ
  *
  * 【クロージング】
  * 6. PricingEfficiency - 料金プラン
@@ -39,11 +39,11 @@ export default function EfficiencyCreativePage() {
         {/* ファーストビュー */}
         <HeroEfficiency />
 
-        {/* ボディ: 共感+ベネフィット → 差別化 → サービス詳細 → 流れ */}
-        <CostSavings />
-        <ComparisonTable />
-        <CreativeShowcase />
-        <ProcessEfficiency />
+        {/* ボディ: 問題提起 → ソリューション → 強み・特徴 → 流れ */}
+        <ProblemsEfficiency />
+        <SolutionEfficiency />
+        <FeaturesEfficiency />
+        <HowItWorksEfficiency />
 
         {/* クロージング */}
         <PricingEfficiency />
