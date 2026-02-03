@@ -5,18 +5,19 @@ export const siteConfig = {
 };
 
 export const hero = {
-  catchphrase: "クリエイティブ費用を\n半減、広告費に回せる",
-  subCatchphrase: "AI×自動化で、制作コストを最適化",
+  catchphrase: "制作費50%削減、\n広告費に回せる",
+  subCatchphrase: "AI×自動化で、クリエイティブ制作の常識を変える",
   description:
     "代理店への制作費、もっと効率化できる。\n削減した費用を広告費に回して、ROAS向上を実現。",
   stats: [
-    { value: "50", unit: "%", label: "制作費削減" },
-    { value: "30", unit: "%", label: "広告費増加" },
-    { value: "2x", unit: "", label: "ROAS改善" },
+    { value: "50", unit: "%削減", label: "制作コスト", sublabel: "コスト削減" },
+    { value: "5,000", unit: "+", label: "制作実績", sublabel: "クリエイティブ数" },
+    { value: "即日", unit: "", label: "納品スピード", sublabel: "最短対応" },
+    { value: "98", unit: "%", label: "継続率", sublabel: "リピーター" },
   ],
   cta: {
-    primary: "無料でお試し作成",
-    primaryUrl: "https://lin.ee/gVIckSF",
+    primary: "今すぐ無料でお試し",
+    primaryUrl: "https://lin.ee/xN9WWHl",
     secondary: "サービスを詳しく見る",
   },
 };
@@ -52,22 +53,22 @@ export const problems = {
 };
 
 export const solution = {
-  title: "すべて、解決できます。",
-  subtitle: "AI×自動化で、クリエイティブ制作の常識を変える",
+  title: "制作費を広告費に回せる",
+  subtitle: "浮いたコストで、もっと広告を打てる。ROASが変わる。",
   features: [
     {
-      title: "制作費を大幅カット",
-      description: "月額固定で何本でも制作可能。1本あたりのコストを劇的に削減。",
+      title: "制作費50%カット",
+      description: "月額固定で作り放題。1本あたり500円〜で高品質なクリエイティブが手に入る。",
       icon: "scissors",
     },
     {
-      title: "最短即日で納品",
-      description: "AIが自動生成するから、依頼から納品まで最短即日。スピード勝負に強い。",
+      title: "即日納品、待ち時間ゼロ",
+      description: "AIが自動生成するから、依頼したその日に使える。機会損失なし。",
       icon: "zap",
     },
     {
-      title: "修正は何度でも無料",
-      description: "納得いくまで何度でも修正OK。追加費用を気にせず品質を追求。",
+      title: "修正無制限、追加費用ゼロ",
+      description: "納得いくまで何度でもOK。「もう1パターン欲しい」にも即対応。",
       icon: "check",
     },
   ],
@@ -233,7 +234,7 @@ export const cta = {
   description:
     "公式LINEに商品画像を送信するだけ。どんな広告クリエイティブができるか、まずは体験してみてください。",
   primary: "LINEで無料お試し",
-  primaryUrl: "https://lin.ee/gVIckSF",
+  primaryUrl: "https://lin.ee/xN9WWHl",
   benefits: [
     "画像を送るだけでOK",
     "お試し作成は完全無料",

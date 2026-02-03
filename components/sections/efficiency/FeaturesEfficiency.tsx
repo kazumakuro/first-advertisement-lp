@@ -29,9 +29,13 @@ const iconMap: Record<string, React.ReactNode> = {
 export function FeaturesEfficiency() {
   return (
     <Section background="industrial" id="features">
+      {/* タイトル - ナンバリングを強調 */}
       <div className="text-center mb-12 md:mb-16">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-          {features.title}
+        <p className="text-electric-400 font-medium mb-4 uppercase tracking-wider">
+          Why Choose Us
+        </p>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+          選ばれる<span className="text-electric-400">4つ</span>の理由
         </h2>
       </div>
 
@@ -39,10 +43,20 @@ export function FeaturesEfficiency() {
         {features.items.map((item, index) => (
           <div
             key={index}
-            className="bg-white/5 border border-white/10 p-6 md:p-8 hover:border-electric-500/30 transition-colors"
+            className="relative bg-white/5 border border-white/10 p-6 md:p-8 hover:border-electric-500/30 transition-colors overflow-hidden"
           >
+            {/* 大きな番号 - 背景に配置 */}
+            <div className="absolute -top-4 -right-4 text-8xl md:text-9xl font-bold text-white/5 select-none pointer-events-none">
+              {String(index + 1).padStart(2, '0')}
+            </div>
+
+            {/* Reason ラベル */}
+            <div className="text-electric-400 font-bold text-sm uppercase tracking-wider mb-4">
+              Reason {String(index + 1).padStart(2, '0')}
+            </div>
+
             {/* Header */}
-            <div className="flex items-start gap-4 mb-4">
+            <div className="flex items-start gap-4 mb-4 relative z-10">
               <div className="flex-shrink-0 w-14 h-14 bg-electric-500/20 flex items-center justify-center text-electric-500">
                 {iconMap[item.icon]}
               </div>
@@ -57,14 +71,14 @@ export function FeaturesEfficiency() {
             </div>
 
             {/* Details */}
-            <ul className="space-y-2 mt-4 pt-4 border-t border-white/10">
+            <ul className="space-y-2 mt-4 pt-4 border-t border-white/10 relative z-10">
               {item.details.map((detail, detailIndex) => (
                 <li
                   key={detailIndex}
                   className="flex items-center gap-2 text-gray-300 text-sm"
                 >
                   <svg
-                    className="w-4 h-4 text-neon-500 flex-shrink-0"
+                    className="w-4 h-4 text-electric-400 flex-shrink-0"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >

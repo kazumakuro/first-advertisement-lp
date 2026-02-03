@@ -5,13 +5,13 @@ export const siteConfig = {
 };
 
 export const hero = {
-  catchphrase: "広告がわからないあなたの、\nはじめの一歩",
-  subCatchphrase: "1万円から、プロの広告を。",
+  catchphrase: "1万円から、\nプロの広告を。",
+  subCatchphrase: "広告のこと、ぜんぶおまかせ。",
   description:
     "ハンドメイド作家、イラストレーター、教室運営者。\n「広告は難しい・高い・怖い」と感じているあなたに。",
   cta: {
-    primary: "無料相談を予約する",
-    primaryUrl: "https://lin.ee/gVIckSF",
+    primary: "今すぐ無料相談する",
+    primaryUrl: "https://lin.ee/xN9WWHl",
     secondary: "サービスを詳しく見る",
   },
 };
@@ -47,49 +47,49 @@ export const problems = {
 };
 
 export const solution = {
-  title: "すべて、おまかせください。",
-  subtitle: "広告出稿からクリエイティブ制作、運用・分析まで、ワンストップで。",
+  title: "広告のこと、ぜんぶおまかせ。",
+  subtitle: "あなたは「やりたいこと」を伝えるだけ。あとは私たちが形にします。",
   features: [
     {
-      title: "少額から始められる",
-      description: "月1万円から、あなたのペースで広告を出せます。",
+      title: "月1万円から、プロの広告が手に入る",
+      description: "高い代理店費用は不要。少額から試して、効果を見てから増やせます。",
       icon: "sparkles",
     },
     {
-      title: "初心者に優しい設計",
-      description: "わからないことが前提。迷わない操作と丁寧なサポート。",
+      title: "わからなくても、大丈夫",
+      description: "専門知識ゼロでOK。専任担当が一緒に考え、伴走します。",
       icon: "handshake",
     },
     {
-      title: "すべてが一箇所で完結",
-      description: "広告出稿、クリエイティブ制作、運用、分析。全部ここで。",
+      title: "制作から分析まで、丸投げOK",
+      description: "広告画像・動画の制作、配信、改善。全部まとめてお任せください。",
       icon: "target",
     },
   ],
 };
 
 export const howItWorks = {
-  title: "使い方はシンプル、3ステップ",
+  title: "たった3ステップで広告開始",
   steps: [
     {
       number: 1,
-      title: "目的を選ぶ",
+      title: "目的を伝える",
       description:
-        "「商品を売りたい」「フォロワーを増やしたい」「予約を増やしたい」。あなたの目的を選ぶだけ。",
+        "「売上を上げたい」「フォロワーを増やしたい」など、やりたいことを教えてください。",
       icon: "target",
     },
     {
       number: 2,
-      title: "広告を作る",
+      title: "広告が届く",
       description:
-        "AIがあなたの商品や活動に合わせて、広告画像・動画・コピーを自動生成。もちろん編集もOK。",
+        "あなたの商品に合った広告をプロが作成。確認してOKを出すだけ。",
       icon: "palette",
     },
     {
       number: 3,
-      title: "配信して、見守る",
+      title: "効果を実感",
       description:
-        "最適な媒体に自動配信。成果はダッシュボードで一目瞭然。改善提案も自動で届きます。",
+        "配信後は結果を一緒に確認。改善案もお伝えします。",
       icon: "chart",
     },
   ],
@@ -240,15 +240,15 @@ export const faq = {
 };
 
 export const cta = {
-  title: "あなたの声を聞かせてください",
-  subtitle: "さまざまなジャンルで集客支援をしてきた担当者が、あなたのお悩みを一緒に考えます。",
-  description: "「こんなサービスがあったらいいな」「この部分がもっとこうだったら」など、率直なご意見をお聞かせください。もちろん、広告や集客のお悩み相談も大歓迎です。",
-  primary: "無料で相談してみる",
-  primaryUrl: "https://lin.ee/gVIckSF",
+  title: "まずは無料で相談してみませんか？",
+  subtitle: "広告の疑問・不安、なんでもお聞きください。売り込みは一切ありません。",
+  description: "「自分に広告は必要？」「いくらかかる？」「本当に効果出る？」そんな疑問に、経験豊富な担当者がお答えします。",
+  primary: "今すぐ無料相談する",
+  primaryUrl: "https://lin.ee/xN9WWHl",
   secondary: "サービス詳細を見る",
   benefits: [
-    "予約は30秒で完了",
-    "オンラインで気軽に相談",
-    "売り込みは一切なし",
+    "30秒で予約完了",
+    "オンラインで完結",
+    "売り込み一切なし",
   ],
 };

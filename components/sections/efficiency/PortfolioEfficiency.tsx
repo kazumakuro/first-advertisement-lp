@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { Section } from "@/components/ui/Section";
+import { trackExternalLink } from "@/lib/analytics";
 
 // 埋め込みたい投稿のURLをここに追加
 const instagramPosts = [
@@ -77,6 +78,7 @@ export function PortfolioEfficiency() {
             href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackExternalLink("Instagram", "portfolio")}
             className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white font-semibold uppercase tracking-wider hover:opacity-90 transition-opacity"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

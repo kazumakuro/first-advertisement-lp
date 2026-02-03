@@ -1,10 +1,14 @@
+"use client";
+
 import React from "react";
+import { useSectionView } from "@/lib/useSectionView";
 
 interface SectionProps {
   children: React.ReactNode;
   className?: string;
   id?: string;
   background?: "cream" | "white" | "gradient" | "dark" | "industrial";
+  trackView?: boolean;
 }
 
 export function Section({
@@ -12,7 +16,10 @@ export function Section({
   className = "",
   id,
   background = "cream",
+  trackView = true,
 }: SectionProps) {
+  const sectionRef = useSectionView(id || "unnamed-section");
+
   const backgrounds = {
     cream: "bg-cream-50",
     white: "bg-white",
@@ -24,6 +31,7 @@ export function Section({
 
   return (
     <section
+      ref={trackView ? sectionRef : undefined}
       id={id}
       className={`py-16 md:py-24 ${backgrounds[background]} ${className}`}
     >

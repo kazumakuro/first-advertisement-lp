@@ -3,7 +3,10 @@
     "allow": [
       "Bash(npm install)",
       "Bash(git add:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)",
+      "WebFetch(domain:directscout.recruit.co.jp)",
+      "WebFetch(domain:03plus.net)"
     ]
   }
 }

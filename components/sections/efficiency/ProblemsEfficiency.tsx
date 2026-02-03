@@ -2,60 +2,112 @@
 
 import { problems } from "@/config/content-efficiency";
 import { Section } from "@/components/ui/Section";
-
-const iconMap: Record<string, React.ReactNode> = {
-  money: (
-    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-  ),
-  clock: (
-    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-  ),
-  refresh: (
-    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-    </svg>
-  ),
-  copy: (
-    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-    </svg>
-  ),
-};
+import Image from "next/image";
 
 export function ProblemsEfficiency() {
   return (
     <Section background="industrial" id="problems">
-      <div className="text-center mb-12 md:mb-16">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-          {problems.title}
-        </h2>
-      </div>
+      <div className="max-w-6xl mx-auto">
+        {/* タイトル */}
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+            こんな<span className="text-electric-400">課題</span>ありませんか？
+          </h2>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        {problems.items.map((item, index) => (
-          <div
-            key={index}
-            className="bg-white/5 border border-white/10 p-6 md:p-8 hover:border-electric-500/30 transition-colors"
-          >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-electric-500/10 border border-electric-500/30 flex items-center justify-center text-electric-500">
-                {iconMap[item.icon]}
-              </div>
-              <div>
-                <h3 className="text-lg md:text-xl font-bold text-white mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {item.description}
+        {/* 吹き出し + 困っている女性レイアウト */}
+        <div className="relative max-w-4xl mx-auto">
+          {/* デスクトップ: 吹き出しレイアウト */}
+          <div className="hidden md:block">
+            {/* 左側の吹き出し */}
+            <div className="absolute left-0 top-8 w-[280px] transform -translate-x-4">
+              <div className="bg-white/10 backdrop-blur-sm text-white p-4 rounded-2xl rounded-br-none border border-white/20 shadow-lg">
+                <p className="text-sm font-medium leading-relaxed">
+                  {problems.items[0]?.title}
+                </p>
+                <p className="text-xs text-gray-400 mt-1">
+                  {problems.items[0]?.description.slice(0, 40)}...
                 </p>
               </div>
             </div>
+
+            <div className="absolute left-0 bottom-24 w-[280px] transform -translate-x-4">
+              <div className="bg-white/10 backdrop-blur-sm text-white p-4 rounded-2xl rounded-tr-none border border-white/20 shadow-lg">
+                <p className="text-sm font-medium leading-relaxed">
+                  {problems.items[1]?.title}
+                </p>
+                <p className="text-xs text-gray-400 mt-1">
+                  {problems.items[1]?.description.slice(0, 40)}...
+                </p>
+              </div>
+            </div>
+
+            {/* 右側の吹き出し */}
+            <div className="absolute right-0 top-8 w-[280px] transform translate-x-4">
+              <div className="bg-white/10 backdrop-blur-sm text-white p-4 rounded-2xl rounded-bl-none border border-white/20 shadow-lg">
+                <p className="text-sm font-medium leading-relaxed">
+                  {problems.items[2]?.title}
+                </p>
+                <p className="text-xs text-gray-400 mt-1">
+                  {problems.items[2]?.description.slice(0, 40)}...
+                </p>
+              </div>
+            </div>
+
+            <div className="absolute right-0 bottom-24 w-[280px] transform translate-x-4">
+              <div className="bg-white/10 backdrop-blur-sm text-white p-4 rounded-2xl rounded-tl-none border border-white/20 shadow-lg">
+                <p className="text-sm font-medium leading-relaxed">
+                  {problems.items[3]?.title}
+                </p>
+                <p className="text-xs text-gray-400 mt-1">
+                  {problems.items[3]?.description.slice(0, 40)}...
+                </p>
+              </div>
+            </div>
+
+            {/* 中央の困っている女性画像 */}
+            <div className="flex justify-center py-8">
+              <div className="relative w-[300px] h-[300px]">
+                <Image
+                  src="/people/trouble_women.png"
+                  alt="困っている女性"
+                  fill
+                  className="object-contain brightness-0 invert opacity-80"
+                />
+              </div>
+            </div>
           </div>
-        ))}
+
+          {/* モバイル: リスト形式 */}
+          <div className="md:hidden">
+            {/* 困っている女性画像 */}
+            <div className="flex justify-center mb-8">
+              <div className="relative w-[200px] h-[200px]">
+                <Image
+                  src="/people/trouble_women.png"
+                  alt="困っている女性"
+                  fill
+                  className="object-contain brightness-0 invert opacity-80"
+                />
+              </div>
+            </div>
+
+            {/* 悩みリスト */}
+            <div className="space-y-4">
+              {problems.items.map((problem, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm text-white p-4 rounded-2xl border border-white/20 shadow-lg"
+                >
+                  <p className="font-medium">{problem.title}</p>
+                  <p className="text-sm text-gray-400 mt-1">
+                    {problem.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </Section>
   );

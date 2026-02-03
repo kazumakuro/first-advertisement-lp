@@ -76,7 +76,7 @@ export function PricingEfficiency() {
 
               {/* CTA */}
               <a
-                href="https://lin.ee/gVIckSF"
+                href="https://lin.ee/xN9WWHl"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block w-full py-3 text-center font-semibold uppercase tracking-wider text-sm transition-colors ${

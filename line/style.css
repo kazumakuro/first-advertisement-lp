@@ -1,0 +1,290 @@
+:root{
+
+  --bg-color: #f1f1f1; /*PC用背景色・PC用スクロールバー*/
+  --line-bc-bg:#8cabd8; /*  LINEの背景・ヘッダー背景 */
+  --says-color:#fff;  /* コメントの色 */
+  --comment-color:#9de693;  /* 自分のコメントの色 */
+  --text-color:#333;  /* 文字色 */
+  --date-color:#7792b8; /* 日付・スクロールバー */
+  --wh-color:#fff;  /* 日付の文字色・フッターの色*/
+  --textarea-color:#f5f5f5; /* フッターのテキストエリア */
+}
+
+
+body {
+  margin: 0px;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  height: 100vh;
+  color:var(--text-color);
+  font-family: 'Roboto Slab','ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo','Osaka','ＭＳ Ｐゴシック', 'MS PGothic',sans-serif;
+}
+
+/* 以下、LINE用の背景とベース */
+.line-bc {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  max-width:600px;
+  margin:0 auto;
+  font-size: 13px;
+  background:var(--line-bc-bg);
+  text-align: left;  
+}
+
+header{
+  width: 100%;
+  height: 2.4rem;
+  position: relative;
+}
+
+header .menu{
+  display: flex;
+  position: absolute;
+  top: 5px;
+  right: 16px;
+  font-size: calc(1.5em);
+  padding: 10px;
+}
+
+header div.menu > *{
+  margin: 0 6px;
+
+}
+
+h1{
+  text-align:left;
+  color:var(--text-color);
+  margin:10px;
+  font-size:calc(1.5em);
+}
+
+h1:before{
+  font-family: 'font awesome 6 free';
+  font-style: normal;
+  font-weight:900;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content: '\f053';
+  font-size: 1.0em;
+  color:var(--text-color);
+  margin-right: 20px;
+}
+
+main{
+  flex:1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: right;
+}
+
+
+/*以下、②左側のコメント*/
+.send {
+  width: 100%;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.send .faceicon {
+  float: left;
+  margin-right: -50px;
+  margin-left: 5px;
+  width: 40px;
+}
+
+.send .faceicon img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.name{
+  font-weight:bold;
+  margin: 0 0 4px 50px;
+}
+
+.send .chatting {
+  width: 100%;
+  text-align: left;
+}
+.says {
+  display: inline-block;
+  position: relative; 
+  margin:0 0 5px 55px;
+  padding: 10px;
+  max-width: 250px;
+  border-radius: 12px;
+  background: var(--says-color);
+  text-align: left;
+}
+
+
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 3px; 
+  left: -19px;
+  border: 8px solid transparent;
+  border-right: 18px solid var(--says-color);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(35deg);
+}
+.says p {
+  margin: 0;
+  padding: 0;
+}
+
+.says p:last-child{
+  position: absolute;
+  right: -4.5em;
+  text-align: left;
+  bottom: 4px;
+  display: inline-block;
+  width: 4em;
+  font-size: 0.9em;
+  line-height: 1em;
+}
+
+/*以下、③右側の緑コメント*/
+
+.mycoment{
+  width: 100%;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.mycoment .chatting{
+  width: 100%;
+}
+
+.myname{
+  font-weight:bold;
+  margin: 0 5px 4px 50px;
+  text-align: right;
+}
+
+.comment {
+  display: inline-block;
+  position: relative; 
+  margin:0 15px 5px 0;
+  padding: 10px;
+  max-width: 250px;
+  border-radius: 12px;
+  background:  var(--comment-color);
+}
+
+.comment:after {
+  content: "";
+  position: absolute;
+  top: 3px; 
+  right: -19px;
+  border: 8px solid transparent;
+  border-left: 18px solid  var(--comment-color);
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
+
+.comment p {
+  margin: 0;
+  padding: 0;
+  text-align:left;
+  line-height: 1em;
+}
+
+.comment p:last-child{
+  position: absolute;
+  left: -4.5em;
+  text-align: right;
+  bottom: 4px;
+  display: inline-block;
+  width: 4em;
+  font-size: 0.9em;
+}
+
+.date{
+  background:var(--date-color);
+  color:var(--wh-color);
+}
+
+
+/* ここからフッターデザイン */
+
+footer {
+  width: 100%;
+  max-width:600px;
+  bottom:0;
+  height: 3rem;
+  margin:0 auto;
+  padding-top: 9px;
+  background-color: var(--wh-color); 
+  position: relative;
+}
+
+footer .menu > * {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 1.5em;
+  overflow: hidden;
+  font-size:1.8rem;
+  margin:10px;
+}
+
+footer .form-box {
+  display: block;
+  height: 6em;
+  padding: 0.2em 2em 0.2em 1.5em;
+  border-radius: 1.5em;
+  font-size: 0.5em;
+  text-align: left;
+  overflow-y: auto;
+  width: 50%;
+  max-width:300px; 
+  background-color: var(--textarea-color);
+}
+
+
+footer .mic  {right: 0.2em;}
+footer .plus {right:3.75em;}
+footer .camera {right: 2.5em;}
+footer .image {right:  1.25em;}
+
+/* スクロールバー設定 */
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: var(--date-color);
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--bg-color);
+}
+
+.textarea-container {
+position: relative;
+}
+
+textarea {
+width: 50%;
+max-width:300px;
+height: 60px;
+padding:10px;
+box-sizing: border-box;
+}
+
+.icon-container {
+position: absolute;
+bottom: 10px;
+right: 10px;
+}
+
+.icon-container i {
+font-size: 24px;
+}
+
+.fa-light{vertical-align: middle;}
