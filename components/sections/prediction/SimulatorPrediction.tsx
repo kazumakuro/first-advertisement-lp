@@ -4,6 +4,7 @@ import { useState, useCallback } from "react";
 import { simulator } from "@/config/content-prediction";
 import { Section } from "@/components/ui/Section";
 import { trackSimulatorInput, trackSimulatorResult } from "@/lib/analytics";
+import { ComingSoonDialog } from "@/components/shared/ComingSoonDialog";
 
 interface SimulatorResult {
   recommendedBudget: number;
@@ -30,6 +31,7 @@ export function SimulatorPrediction() {
   const [monthlyRevenue, setMonthlyRevenue] = useState("");
   const [result, setResult] = useState<SimulatorResult | null>(null);
   const [showResult, setShowResult] = useState(false);
+  const [showDialog, setShowDialog] = useState(false);
 
   const calculatePrediction = useCallback(() => {
     const priceNum = parseInt(price) || 0;
@@ -40,44 +42,17 @@ export function SimulatorPrediction() {
       return;
     }
 
-    // 粗利率
-    const margin = (priceNum - costNum) / priceNum;
-
-    // 基準ROASをカテゴリから取得
-    const baseRoas = categoryRoasBase[category] || 250;
-
-    // 粗利率に応じてROASを調整（粗利率が高いほどROASが出やすい）
-    const adjustedRoas = Math.round(baseRoas * (1 + (margin - 0.5) * 0.5));
-
-    // 推奨予算は月商の10-20%（粗利率に応じて調整）
-    const budgetRate = 0.1 + margin * 0.1;
-    const recommendedBudget = Math.round(revenueNum * budgetRate / 10000) * 10000;
-
-    // 追加売上予測
-    const additionalSales = Math.round(recommendedBudget * (adjustedRoas / 100));
-
-    // 回収期間（月）
-    const monthlyProfit = additionalSales * margin;
-    const paybackPeriod = recommendedBudget / monthlyProfit;
-
-    const calculatedResult = {
-      recommendedBudget,
-      predictedRoas: adjustedRoas,
-      additionalSales,
-      paybackPeriod: Math.round(paybackPeriod * 10) / 10,
-    };
-
-    setResult(calculatedResult);
-    setShowResult(true);
-
     // Analytics
     trackSimulatorResult({
       category,
       price: priceNum,
-      budget: recommendedBudget,
-      roas: adjustedRoas,
-      additionalSales,
+      budget: 0,
+      roas: 0,
+      additionalSales: 0,
     }, "effect-prediction");
+
+    // Show coming soon dialog
+    setShowDialog(true);
   }, [category, price, cost, monthlyRevenue]);
 
   const handleInputChange = (field: string, value: string) => {
@@ -258,6 +233,14 @@ export function SimulatorPrediction() {
           </div>
         </div>
       </div>
+
+      {/* Coming Soon Dialog */}
+      <ComingSoonDialog
+        isOpen={showDialog}
+        onClose={() => setShowDialog(false)}
+        featureName="効果予測シミュレーター"
+        pageName="effect-prediction"
+      />
     </Section>
   );
 }

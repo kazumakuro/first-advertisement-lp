@@ -3,24 +3,17 @@
 import { useState } from "react";
 import { demo } from "@/config/content-branding";
 import { trackDemoInteraction } from "@/lib/analytics";
+import { ComingSoonDialog } from "@/components/shared/ComingSoonDialog";
 
 export function DemoBranding() {
   const [url, setUrl] = useState("");
-  const [showResult, setShowResult] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [showDialog, setShowDialog] = useState(false);
 
   const handleAnalyze = () => {
     if (!url) return;
 
-    setIsLoading(true);
     trackDemoInteraction("analyze_click", "ai-branding", url);
-
-    // シミュレート: 実際はAPIコールになる
-    setTimeout(() => {
-      setIsLoading(false);
-      setShowResult(true);
-      trackDemoInteraction("result_shown", "ai-branding");
-    }, 1500);
+    setShowDialog(true);
   };
 
   return (
@@ -55,29 +48,19 @@ export function DemoBranding() {
               </div>
               <button
                 onClick={handleAnalyze}
-                disabled={!url || isLoading}
-                className="px-8 py-4 bg-gradient-to-r from-warmth-500 to-rose-500 text-white font-semibold rounded-full hover:from-warmth-400 hover:to-rose-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-warmth-500/25"
+                disabled={!url}
+                className="px-8 py-4 bg-gradient-to-r from-warmth-500 to-rose-500 text-white font-semibold rounded-full hover:from-warmth-400 hover:to-rose-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-warmth-500/25 btn-magnetic"
               >
-                {isLoading ? (
-                  <>
-                    <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                    </svg>
-                    分析中...
-                  </>
-                ) : (
-                  demo.buttonText
-                )}
+                {demo.buttonText}
               </button>
             </div>
           </div>
 
           {/* Sample Result */}
-          <div className={`transition-all duration-500 ${showResult ? 'opacity-100' : 'opacity-60'}`}>
+          <div className="transition-all duration-500 opacity-60">
             <div className="bg-white border-2 border-warmth-200 p-6 md:p-8 rounded-2xl shadow-lg">
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-2 h-2 bg-gradient-to-r from-warmth-500 to-rose-500 rounded-full animate-pulse" />
+                <div className="w-2 h-2 bg-gradient-to-r from-warmth-500 to-rose-500 rounded-full" />
                 <span className="text-warmth-600 text-sm font-medium">
                   {demo.sampleResult.title}
                 </span>
@@ -130,13 +113,19 @@ export function DemoBranding() {
             </div>
           </div>
 
-          {!showResult && (
-            <p className="text-center text-gray-500 text-sm mt-4">
-              ※ 上のフォームにURLを入力すると、サンプル分析結果が表示されます
-            </p>
-          )}
+          <p className="text-center text-gray-500 text-sm mt-4">
+            ※ 上のフォームにURLを入力すると、サンプル分析結果が表示されます
+          </p>
         </div>
       </div>
+
+      {/* Coming Soon Dialog */}
+      <ComingSoonDialog
+        isOpen={showDialog}
+        onClose={() => setShowDialog(false)}
+        featureName="AI魅力言語化"
+        pageName="ai-branding"
+      />
     </section>
   );
 }

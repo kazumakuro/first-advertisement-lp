@@ -174,9 +174,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
-        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
-        mono: ["var(--font-geist-mono)", "ui-monospace", "monospace"],
+        sans: ["var(--font-body)", "Noto Sans JP", "sans-serif"],
+        heading: ["var(--font-heading)", "Zen Kaku Gothic New", "sans-serif"],
+        mono: ["ui-monospace", "SFMono-Regular", "monospace"],
       },
       borderRadius: {
         '4xl': '2rem',

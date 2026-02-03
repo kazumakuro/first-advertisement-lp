@@ -12,11 +12,11 @@ export function CTACreative() {
   };
 
   return (
-    <section className="relative py-20 md:py-28 bg-gradient-to-b from-violet-50 to-pink-50" id="cta">
+    <section className="relative py-20 md:py-28 bg-gradient-to-b from-rose-50 to-orange-50" id="cta">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="relative max-w-5xl mx-auto">
           {/* Background effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-200/50 via-pink-200/50 to-orange-200/50 blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-rose-200/50 via-coral-200/50 to-orange-200/50 blur-3xl" />
 
           <div className="relative bg-white border border-purple-100 p-8 md:p-12 lg:p-16 rounded-3xl shadow-xl shadow-purple-200/50">
             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
@@ -91,7 +91,7 @@ export function CTACreative() {
               <div className="flex-shrink-0 hidden lg:block">
                 <div className="relative">
                   {/* 背景装飾 */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-300/30 via-pink-300/30 to-orange-300/30 rounded-3xl blur-2xl transform scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-rose-300/30 via-coral-300/30 to-orange-300/30 rounded-3xl blur-2xl transform scale-110" />
 
                   {/* 人物写真コンテナ */}
                   <div className="relative w-64 h-80 rounded-3xl overflow-hidden border-4 border-white shadow-2xl">

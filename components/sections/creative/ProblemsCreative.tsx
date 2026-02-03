@@ -11,7 +11,7 @@ export function ProblemsCreative() {
           {/* タイトル */}
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">
-              広告クリエイティブ、こんな<span className="text-purple-500">課題</span>ありませんか？
+              広告クリエイティブ、こんな<span className="text-rose-500">課題</span>ありませんか？
             </h2>
           </div>
 
@@ -21,7 +21,7 @@ export function ProblemsCreative() {
             <div className="hidden md:block">
               {/* 左側の吹き出し */}
               <div className="absolute left-0 top-8 w-[280px] transform -translate-x-4">
-                <div className="bg-gradient-to-br from-violet-100 to-pink-100 text-gray-700 p-4 rounded-2xl rounded-br-none border border-purple-200 shadow-lg">
+                <div className="bg-gradient-to-br from-rose-100 to-orange-100 text-gray-700 p-4 rounded-2xl rounded-br-none border border-rose-200 shadow-lg">
                   <p className="text-sm font-medium leading-relaxed">
                     {problems.items[0]?.title}
                   </p>
@@ -32,7 +32,7 @@ export function ProblemsCreative() {
               </div>
 
               <div className="absolute left-0 bottom-24 w-[280px] transform -translate-x-4">
-                <div className="bg-gradient-to-br from-violet-100 to-pink-100 text-gray-700 p-4 rounded-2xl rounded-tr-none border border-purple-200 shadow-lg">
+                <div className="bg-gradient-to-br from-rose-100 to-orange-100 text-gray-700 p-4 rounded-2xl rounded-tr-none border border-rose-200 shadow-lg">
                   <p className="text-sm font-medium leading-relaxed">
                     {problems.items[1]?.title}
                   </p>
@@ -44,7 +44,7 @@ export function ProblemsCreative() {
 
               {/* 右側の吹き出し */}
               <div className="absolute right-0 top-8 w-[280px] transform translate-x-4">
-                <div className="bg-gradient-to-br from-violet-100 to-pink-100 text-gray-700 p-4 rounded-2xl rounded-bl-none border border-purple-200 shadow-lg">
+                <div className="bg-gradient-to-br from-rose-100 to-orange-100 text-gray-700 p-4 rounded-2xl rounded-bl-none border border-rose-200 shadow-lg">
                   <p className="text-sm font-medium leading-relaxed">
                     {problems.items[2]?.title}
                   </p>
@@ -55,7 +55,7 @@ export function ProblemsCreative() {
               </div>
 
               <div className="absolute right-0 bottom-24 w-[280px] transform translate-x-4">
-                <div className="bg-gradient-to-br from-violet-100 to-pink-100 text-gray-700 p-4 rounded-2xl rounded-tl-none border border-purple-200 shadow-lg">
+                <div className="bg-gradient-to-br from-rose-100 to-orange-100 text-gray-700 p-4 rounded-2xl rounded-tl-none border border-rose-200 shadow-lg">
                   <p className="text-sm font-medium leading-relaxed">
                     {problems.items[3]?.title}
                   </p>
@@ -97,7 +97,7 @@ export function ProblemsCreative() {
                 {problems.items.map((problem, index) => (
                   <div
                     key={index}
-                    className="bg-gradient-to-br from-violet-100 to-pink-100 text-gray-700 p-4 rounded-2xl border border-purple-200 shadow-lg"
+                    className="bg-gradient-to-br from-rose-100 to-orange-100 text-gray-700 p-4 rounded-2xl border border-rose-200 shadow-lg"
                   >
                     <p className="font-medium">{problem.title}</p>
                     <p className="text-sm text-gray-500 mt-1">

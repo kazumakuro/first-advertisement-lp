@@ -12,7 +12,7 @@ export function HeroCreative() {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-violet-50 via-pink-50 to-orange-50 overflow-hidden">
+    <section className="relative min-h-[500px] md:min-h-screen bg-gradient-to-br from-rose-50 via-orange-50 to-amber-50 overflow-hidden noise-texture">
       {/* Background effects - Colorful Instagram-like gradient */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-300/30 rounded-full blur-3xl" />
@@ -31,7 +31,7 @@ export function HeroCreative() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handlePrimaryClick}
-            className="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white font-semibold rounded-full text-sm hover:opacity-90 transition-all shadow-lg"
+            className="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-gradient-to-r from-rose-500 via-coral-500 to-orange-400 text-white font-semibold rounded-full text-sm hover:opacity-90 transition-all shadow-lg"
           >
             {hero.cta.primary}
           </a>
@@ -45,8 +45,8 @@ export function HeroCreative() {
           <div className="flex-1 max-w-2xl">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 border border-purple-200 rounded-full mb-6 md:mb-8 shadow-sm">
-              <span className="w-2 h-2 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 rounded-full animate-pulse" />
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent text-sm font-medium">
+              <span className="w-2 h-2 bg-gradient-to-r from-rose-500 via-coral-500 to-orange-400 rounded-full" />
+              <span className="bg-gradient-to-r from-rose-600 to-coral-600 bg-clip-text text-transparent text-sm font-medium">
                 AI Creative Generator
               </span>
             </div>
@@ -79,13 +79,13 @@ export function HeroCreative() {
               {hero.stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="text-center p-4 md:p-5 bg-white/80 border border-purple-100 rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
+                  className="text-center p-4 md:p-5 bg-white/80 border border-rose-100 rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 bg-clip-text text-transparent font-mono">
+                    <span className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-rose-500 via-coral-500 to-orange-400 bg-clip-text text-transparent font-mono">
                       {stat.value}
                     </span>
-                    <span className="text-base md:text-xl bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 bg-clip-text text-transparent font-mono">
+                    <span className="text-base md:text-xl bg-gradient-to-r from-rose-500 via-coral-500 to-orange-400 bg-clip-text text-transparent font-mono">
                       {stat.unit}
                     </span>
                   </div>
@@ -108,7 +108,7 @@ export function HeroCreative() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handlePrimaryClick}
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white font-semibold text-lg rounded-full hover:opacity-90 transition-all shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-rose-500 via-coral-500 to-orange-400 text-white font-semibold text-lg rounded-full shadow-lg btn-magnetic hover-glow"
               >
                 {hero.cta.primary}
                 <svg
@@ -127,7 +127,7 @@ export function HeroCreative() {
               </a>
               <a
                 href="#before-after"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-purple-400 text-purple-600 font-semibold text-lg rounded-full hover:bg-purple-50 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-rose-400 text-rose-600 font-semibold text-lg rounded-full hover:bg-rose-50 transition-colors"
               >
                 {hero.cta.secondary}
               </a>
@@ -138,7 +138,7 @@ export function HeroCreative() {
           <div className="flex-shrink-0 hidden lg:block">
             <div className="relative">
               {/* 背景装飾 */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-300/30 via-pink-300/30 to-orange-300/30 rounded-3xl blur-2xl transform scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-br from-rose-300/30 via-coral-300/30 to-orange-300/30 rounded-3xl blur-2xl transform scale-110" />
 
               {/* 人物写真コンテナ */}
               <div className="relative w-80 h-96 rounded-3xl overflow-hidden border-4 border-white shadow-2xl">
@@ -153,16 +153,16 @@ export function HeroCreative() {
               </div>
 
               {/* フローティングバッジ */}
-              <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-lg p-4 border border-purple-100">
+              <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-lg p-4 border border-rose-100">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 via-pink-400 to-orange-400 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-rose-400 via-coral-400 to-orange-400 flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">最短</p>
-                    <p className="text-sm font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">5分で完成</p>
+                    <p className="text-sm font-bold bg-gradient-to-r from-rose-600 to-coral-600 bg-clip-text text-transparent">5分で完成</p>
                   </div>
                 </div>
               </div>

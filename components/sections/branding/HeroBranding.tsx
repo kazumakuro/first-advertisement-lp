@@ -12,7 +12,7 @@ export function HeroBranding() {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-orange-50 via-rose-50 to-violet-50 overflow-hidden">
+    <section className="relative min-h-[500px] md:min-h-screen bg-gradient-to-b from-orange-50 via-rose-50 to-amber-50 overflow-hidden noise-texture">
       {/* Background effects - Warm gradient theme */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-warmth-300/30 rounded-full blur-3xl" />
@@ -45,7 +45,7 @@ export function HeroBranding() {
           <div className="flex-1 max-w-2xl">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 border border-warmth-200 rounded-full mb-6 md:mb-8 shadow-sm">
-              <span className="w-2 h-2 bg-gradient-to-r from-warmth-500 to-rose-500 rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-gradient-to-r from-warmth-500 to-rose-500 rounded-full" />
               <span className="text-warmth-600 text-sm font-medium">
                 AI Branding
               </span>
@@ -108,7 +108,7 @@ export function HeroBranding() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handlePrimaryClick}
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-warmth-500 to-rose-500 text-white font-semibold text-lg rounded-full hover:from-warmth-400 hover:to-rose-400 transition-all shadow-lg shadow-warmth-500/25"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-warmth-500 to-rose-500 text-white font-semibold text-lg rounded-full shadow-lg shadow-warmth-500/25 btn-magnetic hover-glow"
               >
                 {hero.cta.primary}
                 <svg

@@ -16,7 +16,7 @@ export function HowItWorksCreative() {
           {/* Timeline */}
           <div className="relative">
             {/* Connecting line - desktop */}
-            <div className="hidden md:block absolute top-12 left-0 right-0 h-1 bg-gradient-to-r from-purple-300 via-pink-400 to-orange-300 rounded-full" />
+            <div className="hidden md:block absolute top-12 left-0 right-0 h-1 bg-gradient-to-r from-rose-300 via-coral-400 to-orange-300 rounded-full" />
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4">
               {howItWorks.steps.map((step, index) => (
@@ -24,7 +24,7 @@ export function HowItWorksCreative() {
                   {/* Step number circle */}
                   <div className="flex justify-center mb-6">
                     <div className="relative z-10 w-24 h-24 bg-white border-4 border-purple-400 rounded-full flex items-center justify-center shadow-lg shadow-purple-200">
-                      <span className="text-4xl font-bold font-mono bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">
+                      <span className="text-4xl font-bold font-mono bg-gradient-to-r from-rose-500 via-coral-500 to-orange-400 bg-clip-text text-transparent">
                         {String(step.number).padStart(2, "0")}
                       </span>
                     </div>

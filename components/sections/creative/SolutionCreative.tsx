@@ -22,7 +22,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export function SolutionCreative() {
   return (
-    <section className="relative py-20 md:py-28 bg-gradient-to-b from-violet-50 to-pink-50" id="solution">
+    <section className="relative py-20 md:py-28 bg-gradient-to-b from-rose-50 to-orange-50" id="solution">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
@@ -40,7 +40,7 @@ export function SolutionCreative() {
               className="relative bg-white border border-purple-100 p-8 text-center rounded-2xl group hover:shadow-xl hover:shadow-purple-100 transition-all"
             >
               {/* Icon */}
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center text-purple-600 group-hover:scale-110 transition-transform">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-rose-100 to-orange-100 rounded-2xl flex items-center justify-center text-rose-600 group-hover:scale-110 transition-transform">
                 {iconMap[feature.icon]}
               </div>
 

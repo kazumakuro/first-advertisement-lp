@@ -42,24 +42,24 @@ export function ProcessCreative() {
           {/* Process steps */}
           <div className="relative">
             {/* Connecting line - desktop */}
-            <div className="hidden lg:block absolute top-20 left-[12.5%] right-[12.5%] h-1 bg-gradient-to-r from-purple-300 via-pink-400 to-orange-300 rounded-full" />
+            <div className="hidden lg:block absolute top-20 left-[12.5%] right-[12.5%] h-1 bg-gradient-to-r from-rose-300 via-coral-400 to-orange-300 rounded-full" />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {process.steps.map((step, index) => (
                 <div key={index} className="relative">
                   {/* Step card */}
-                  <div className="bg-gradient-to-br from-violet-50 to-pink-50 border border-purple-100 p-6 rounded-2xl hover:shadow-lg hover:shadow-purple-100 transition-all h-full">
+                  <div className="bg-gradient-to-br from-rose-50 to-orange-50 border border-rose-100 p-6 rounded-2xl hover:shadow-lg hover:shadow-purple-100 transition-all h-full">
                     {/* Step number */}
                     <div className="flex justify-center mb-4">
                       <div className="relative z-10 w-16 h-16 bg-white border-2 border-purple-400 rounded-full flex items-center justify-center shadow-lg shadow-purple-100">
-                        <span className="text-2xl font-bold font-mono bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                        <span className="text-2xl font-bold font-mono bg-gradient-to-r from-rose-600 to-coral-600 bg-clip-text text-transparent">
                           {String(step.number).padStart(2, "0")}
                         </span>
                       </div>
                     </div>
 
                     {/* Icon */}
-                    <div className="w-14 h-14 mx-auto mb-4 bg-white border border-purple-200 rounded-xl flex items-center justify-center text-purple-500">
+                    <div className="w-14 h-14 mx-auto mb-4 bg-white border border-rose-200 rounded-xl flex items-center justify-center text-purple-500">
                       {iconMap[step.icon]}
                     </div>
 
@@ -100,12 +100,12 @@ export function ProcessCreative() {
 
           {/* Time indicator */}
           <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-full">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-rose-50 to-orange-50 border border-rose-200 rounded-full">
               <svg className="w-6 h-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span className="text-gray-700 font-medium">
-                全プロセス完了まで <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-bold">最短5分</span>
+                全プロセス完了まで <span className="bg-gradient-to-r from-rose-600 to-coral-600 bg-clip-text text-transparent font-bold">最短5分</span>
               </span>
             </div>
           </div>

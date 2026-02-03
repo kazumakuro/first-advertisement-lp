@@ -11,7 +11,7 @@ export function HeroEfficiency() {
     trackExternalLink("LINE", "hero-efficiency");
   };
   return (
-    <section className="relative min-h-screen bg-dark-100 overflow-hidden">
+    <section className="relative min-h-[500px] md:min-h-screen bg-dark-100 overflow-hidden noise-texture">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-electric-500/10 rounded-full blur-3xl" />
@@ -44,7 +44,7 @@ export function HeroEfficiency() {
           <div className="flex-1 max-w-2xl">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-electric-500/10 border border-electric-500/30 mb-6 md:mb-8">
-              <span className="w-2 h-2 bg-electric-500 rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-electric-500 rounded-full" />
               <span className="text-electric-500 text-sm font-medium uppercase tracking-wider">
                 For Advertisers
               </span>
@@ -107,7 +107,7 @@ export function HeroEfficiency() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handlePrimaryClick}
-                className="inline-flex items-center justify-center px-8 py-4 bg-electric-500 text-dark-100 font-semibold text-lg uppercase tracking-wider hover:bg-electric-400 transition-colors shadow-lg shadow-electric-500/25"
+                className="inline-flex items-center justify-center px-8 py-4 bg-electric-500 text-dark-100 font-semibold text-lg uppercase tracking-wider shadow-lg shadow-electric-500/25 btn-magnetic"
               >
                 {hero.cta.primary}
                 <svg

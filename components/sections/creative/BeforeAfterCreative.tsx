@@ -39,8 +39,8 @@ export function BeforeAfterCreative() {
                 onClick={() => handleCaseChange(index)}
                 className={`px-6 py-3 font-medium text-sm rounded-full transition-all ${
                   activeCase === index
-                    ? "bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white shadow-lg"
-                    : "bg-white border border-purple-200 text-gray-600 hover:border-purple-400"
+                    ? "bg-gradient-to-r from-rose-500 via-coral-500 to-orange-400 text-white shadow-lg"
+                    : "bg-white border border-purple-200 text-gray-600 hover:border-rose-400"
                 }`}
               >
                 {item.category}
@@ -73,11 +73,11 @@ export function BeforeAfterCreative() {
               {/* After */}
               <div className="relative">
                 <div className="absolute -top-3 left-4 px-3 py-1 bg-white z-10 rounded-full">
-                  <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent text-sm font-medium">
+                  <span className="bg-gradient-to-r from-rose-600 to-coral-600 bg-clip-text text-transparent text-sm font-medium">
                     {beforeAfter.cases[activeCase].afterLabel}
                   </span>
                 </div>
-                <div className="border-2 border-purple-400 bg-gradient-to-br from-violet-50 to-pink-50 aspect-square flex items-center justify-center rounded-xl shadow-lg shadow-purple-100">
+                <div className="border-2 border-rose-400 bg-gradient-to-br from-rose-50 to-orange-50 aspect-square flex items-center justify-center rounded-xl shadow-lg shadow-rose-100">
                   {/* Placeholder for after image */}
                   <div className="text-center p-8">
                     <svg className="w-24 h-24 mx-auto text-purple-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

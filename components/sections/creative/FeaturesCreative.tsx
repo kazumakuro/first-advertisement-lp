@@ -31,11 +31,11 @@ export function FeaturesCreative() {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         {/* タイトル - ナンバリングを強調 */}
         <div className="text-center mb-12 md:mb-16">
-          <p className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 bg-clip-text text-transparent font-medium mb-4 uppercase tracking-wider">
+          <p className="bg-gradient-to-r from-rose-500 via-coral-500 to-orange-400 bg-clip-text text-transparent font-medium mb-4 uppercase tracking-wider">
             Why Choose Us
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">
-            選ばれる<span className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 bg-clip-text text-transparent">4つ</span>の理由
+            選ばれる<span className="bg-gradient-to-r from-rose-500 via-coral-500 to-orange-400 bg-clip-text text-transparent">4つ</span>の理由
           </h2>
         </div>
 
@@ -43,7 +43,7 @@ export function FeaturesCreative() {
           {features.items.map((item, index) => (
             <div
               key={index}
-              className="relative bg-gradient-to-br from-violet-50/50 to-pink-50/50 border border-purple-100 p-6 md:p-8 rounded-2xl hover:shadow-lg hover:shadow-purple-100 transition-all overflow-hidden"
+              className="relative bg-gradient-to-br from-rose-50/50 to-orange-50/50 border border-rose-100 p-6 md:p-8 rounded-2xl hover:shadow-lg hover:shadow-purple-100 transition-all overflow-hidden"
             >
               {/* 大きな番号 - 背景に配置 */}
               <div className="absolute -top-4 -right-4 text-8xl md:text-9xl font-bold text-purple-100 select-none pointer-events-none">
@@ -51,7 +51,7 @@ export function FeaturesCreative() {
               </div>
 
               {/* Reason ラベル */}
-              <div className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 bg-clip-text text-transparent font-bold text-sm uppercase tracking-wider mb-4">
+              <div className="bg-gradient-to-r from-rose-500 via-coral-500 to-orange-400 bg-clip-text text-transparent font-bold text-sm uppercase tracking-wider mb-4">
                 Reason {String(index + 1).padStart(2, '0')}
               </div>
 
@@ -71,7 +71,7 @@ export function FeaturesCreative() {
               </div>
 
               {/* Details */}
-              <ul className="space-y-2 mt-4 pt-4 border-t border-purple-100 relative z-10">
+              <ul className="space-y-2 mt-4 pt-4 border-t border-rose-100 relative z-10">
                 {item.details.map((detail, detailIndex) => (
                   <li
                     key={detailIndex}

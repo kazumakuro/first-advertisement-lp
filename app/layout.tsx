@@ -1,12 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans_JP, Zen_Kaku_Gothic_New } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 
-const inter = Inter({
+const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  weight: ["400", "500", "700"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+const zenKaku = Zen_Kaku_Gothic_New({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-heading",
   display: "swap",
 });
 
@@ -41,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${notoSansJP.variable} ${zenKaku.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
