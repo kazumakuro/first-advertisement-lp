@@ -1,6 +1,7 @@
 "use client";
 
 import { features } from "@/config/content-creative";
+import Image from "next/image";
 
 const iconMap: Record<string, React.ReactNode> = {
   zap: (
@@ -37,6 +38,19 @@ export function FeaturesCreative() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">
             選ばれる<span className="bg-gradient-to-r from-rose-500 via-coral-500 to-orange-400 bg-clip-text text-transparent">4つ</span>の理由
           </h2>
+        </div>
+
+        {/* マルチデバイス対応イメージ */}
+        <div className="flex justify-center mb-12">
+          <div className="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-lg bg-rose-50">
+            <Image
+              src="/images/creative/multi-device.jpeg"
+              alt="PC・タブレット・スマホで表示される広告クリエイティブ"
+              width={600}
+              height={400}
+              className="w-full h-auto"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">

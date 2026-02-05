@@ -5,6 +5,7 @@ import { simulator } from "@/config/content-prediction";
 import { Section } from "@/components/ui/Section";
 import { trackSimulatorInput, trackSimulatorResult } from "@/lib/analytics";
 import { ComingSoonDialog } from "@/components/shared/ComingSoonDialog";
+import Image from "next/image";
 
 interface SimulatorResult {
   recommendedBudget: number;
@@ -68,6 +69,19 @@ export function SimulatorPrediction() {
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
           {simulator.subtitle}
         </p>
+      </div>
+
+      {/* 予測グラフイメージ */}
+      <div className="flex justify-center mb-12">
+        <div className="relative w-full max-w-md rounded-lg overflow-hidden bg-dark-50">
+          <Image
+            src="/images/prediction/graph.jpeg"
+            alt="ROAS予測グラフのイメージ"
+            width={500}
+            height={350}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
 
       <div className="max-w-4xl mx-auto">

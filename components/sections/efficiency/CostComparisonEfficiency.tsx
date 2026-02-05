@@ -1,6 +1,7 @@
 "use client";
 
 import { Section } from "@/components/ui/Section";
+import Image from "next/image";
 
 const comparisonData = {
   title: "コスト削減効果を見える化",
@@ -47,6 +48,19 @@ export function CostComparisonEfficiency() {
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
           {comparisonData.subtitle}
         </p>
+      </div>
+
+      {/* コスト比較グラフ画像 */}
+      <div className="flex justify-center mb-12">
+        <div className="relative w-full max-w-lg rounded-lg overflow-hidden bg-dark-50">
+          <Image
+            src="/images/efficiency/cost-graph.jpeg"
+            alt="コスト50%削減の比較グラフ"
+            width={600}
+            height={400}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
 
       <div className="max-w-4xl mx-auto">

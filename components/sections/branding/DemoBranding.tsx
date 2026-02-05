@@ -4,6 +4,7 @@ import { useState } from "react";
 import { demo } from "@/config/content-branding";
 import { trackDemoInteraction } from "@/lib/analytics";
 import { ComingSoonDialog } from "@/components/shared/ComingSoonDialog";
+import Image from "next/image";
 
 export function DemoBranding() {
   const [url, setUrl] = useState("");
@@ -26,6 +27,19 @@ export function DemoBranding() {
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             {demo.subtitle}
           </p>
+        </div>
+
+        {/* 分析UIイメージ */}
+        <div className="flex justify-center mb-10">
+          <div className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-lg bg-orange-50">
+            <Image
+              src="/images/branding/analysis-ui.jpeg"
+              alt="AI分析結果ダッシュボードのイメージ"
+              width={500}
+              height={350}
+              className="w-full h-auto"
+            />
+          </div>
         </div>
 
         <div className="max-w-4xl mx-auto">

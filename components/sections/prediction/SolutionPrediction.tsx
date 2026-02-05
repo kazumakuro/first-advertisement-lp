@@ -2,6 +2,7 @@
 
 import { solution } from "@/config/content-prediction";
 import { Section } from "@/components/ui/Section";
+import Image from "next/image";
 
 const iconMap: Record<string, React.ReactNode> = {
   brain: (
@@ -31,6 +32,19 @@ export function SolutionPrediction() {
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
           {solution.subtitle}
         </p>
+      </div>
+
+      {/* リスク軽減イメージ */}
+      <div className="flex justify-center mb-12">
+        <div className="relative w-full max-w-sm rounded-lg overflow-hidden bg-dark-50">
+          <Image
+            src="/images/prediction/shield.jpeg"
+            alt="データに基づくリスク軽減のイメージ"
+            width={400}
+            height={300}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">

@@ -2,6 +2,7 @@
 
 import { solution } from "@/config/content-efficiency";
 import { Section } from "@/components/ui/Section";
+import Image from "next/image";
 
 const iconMap: Record<string, React.ReactNode> = {
   scissors: (
@@ -31,6 +32,19 @@ export function SolutionEfficiency() {
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
           {solution.subtitle}
         </p>
+      </div>
+
+      {/* ワークフロー説明画像 */}
+      <div className="flex justify-center mb-12">
+        <div className="relative w-full max-w-2xl rounded-lg overflow-hidden bg-dark-50">
+          <Image
+            src="/images/efficiency/workflow.jpeg"
+            alt="効率化されたクリエイティブ制作ワークフロー"
+            width={800}
+            height={400}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">

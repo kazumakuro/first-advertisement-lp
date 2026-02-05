@@ -3,6 +3,7 @@
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { targetAudience } from "@/config/content";
+import Image from "next/image";
 
 const iconMap: Record<string, React.ReactNode> = {
   scissors: (
@@ -41,9 +42,22 @@ export function TargetAudience() {
   return (
     <Section id="target-audience" background="gradient">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-16">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-8">
           {targetAudience.title}
         </h2>
+
+        {/* ターゲット層イメージ */}
+        <div className="flex justify-center mb-12">
+          <div className="relative w-full max-w-xl rounded-2xl overflow-hidden shadow-lg bg-cream-100">
+            <Image
+              src="/images/easy-publish/target-items.jpeg"
+              alt="ハンドメイド、イラスト、教室運営などクリエイターのイメージ"
+              width={600}
+              height={400}
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {targetAudience.audiences.map((audience, index) => (

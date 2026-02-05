@@ -11,8 +11,8 @@ export function HeroEfficiency() {
     trackExternalLink("LINE", "hero-efficiency");
   };
   return (
-    <section className="relative min-h-[500px] md:min-h-screen bg-dark-100 overflow-hidden noise-texture">
-      {/* Background effects */}
+    <section className="relative min-h-[500px] md:min-h-screen bg-dark-100 overflow-hidden">
+      {/* 背景画像（このページは人物写真なのでダーク背景を維持） */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-electric-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-neon-500/10 rounded-full blur-3xl" />
@@ -39,11 +39,11 @@ export function HeroEfficiency() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 pt-12 md:pt-20 pb-20">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          {/* Left content */}
-          <div className="flex-1 max-w-2xl">
+        <div className="flex flex-col items-center gap-8">
+          {/* Text content - センター配置 */}
+          <div className="text-center max-w-3xl">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-electric-500/10 border border-electric-500/30 mb-6 md:mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-electric-500/10 backdrop-blur-sm border border-electric-500/30 mb-6">
               <span className="w-2 h-2 bg-electric-500 rounded-full" />
               <span className="text-electric-500 text-sm font-medium uppercase tracking-wider">
                 For Advertisers
@@ -65,7 +65,7 @@ export function HeroEfficiency() {
             </p>
 
             {/* Description */}
-            <p className="text-base md:text-lg text-gray-500 mb-10 md:mb-12">
+            <p className="text-base md:text-lg text-gray-500 mb-8">
               {hero.description.split("\n").map((line, i) => (
                 <span key={i} className="block">
                   {line}
@@ -73,35 +73,8 @@ export function HeroEfficiency() {
               ))}
             </p>
 
-            {/* Stats - 大きな数字で実績を強調 */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10 md:mb-12">
-              {hero.stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="text-center p-4 md:p-5 bg-white/5 border border-white/10 hover:border-electric-500/30 transition-colors"
-                >
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-electric-500 font-mono">
-                      {stat.value}
-                    </span>
-                    <span className="text-base md:text-xl text-electric-400 font-mono">
-                      {stat.unit}
-                    </span>
-                  </div>
-                  <p className="text-sm md:text-base text-white mt-2 font-medium">
-                    {stat.label}
-                  </p>
-                  {stat.sublabel && (
-                    <p className="text-xs text-gray-500 mt-1">
-                      {stat.sublabel}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a
                 href={hero.cta.primaryUrl}
                 target="_blank"
@@ -131,44 +104,46 @@ export function HeroEfficiency() {
                 {hero.cta.secondary}
               </a>
             </div>
-          </div>
 
-          {/* Right - 人物写真 */}
-          <div className="flex-shrink-0 hidden lg:block">
-            <div className="relative">
-              {/* 背景グロー */}
-              <div className="absolute inset-0 bg-gradient-to-br from-electric-500/20 to-neon-500/20 rounded-2xl blur-2xl transform scale-110" />
-
-              {/* 人物写真コンテナ */}
-              <div className="relative w-80 h-96 rounded-2xl overflow-hidden border border-white/10">
-                <Image
-                  src="/formal/A_01office_seane022.png"
-                  alt="クリエイティブ制作に悩む担当者"
-                  width={320}
-                  height={384}
-                  className="w-full h-full object-contain bg-dark-50"
-                  priority
-                />
-
-                {/* オーバーレイグラデーション */}
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-100/80 via-transparent to-transparent" />
+            {/* フローティングバッジ */}
+            <div className="inline-flex items-center gap-3 bg-dark-50/80 backdrop-blur-sm rounded-xl shadow-lg px-6 py-4 border border-electric-500/30">
+              <div className="w-10 h-10 rounded-full bg-electric-500/20 flex items-center justify-center">
+                <svg className="w-5 h-5 text-electric-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
               </div>
-
-              {/* フローティングバッジ */}
-              <div className="absolute -bottom-4 -right-4 bg-dark-50 rounded-xl shadow-lg p-4 border border-electric-500/30">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-electric-500/20 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-electric-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500">制作コスト</p>
-                    <p className="text-sm font-bold text-electric-500">50%削減</p>
-                  </div>
-                </div>
+              <div className="text-left">
+                <p className="text-xs text-gray-500">制作コスト</p>
+                <p className="text-sm font-bold text-electric-500">50%削減</p>
               </div>
             </div>
+          </div>
+
+          {/* Stats - 大きな数字で実績を強調 */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-3xl">
+            {hero.stats.map((stat, index) => (
+              <div
+                key={index}
+                className="text-center p-4 md:p-5 bg-white/5 backdrop-blur-sm border border-white/10 hover:border-electric-500/30 transition-colors"
+              >
+                <div className="flex items-baseline justify-center gap-1">
+                  <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-electric-500 font-mono">
+                    {stat.value}
+                  </span>
+                  <span className="text-base md:text-xl text-electric-400 font-mono">
+                    {stat.unit}
+                  </span>
+                </div>
+                <p className="text-sm md:text-base text-white mt-2 font-medium">
+                  {stat.label}
+                </p>
+                {stat.sublabel && (
+                  <p className="text-xs text-gray-500 mt-1">
+                    {stat.sublabel}
+                  </p>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>

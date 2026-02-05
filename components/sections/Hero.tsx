@@ -27,26 +27,32 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative min-h-[500px] md:min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-cream-50 via-coral-50/30 to-primary-50/20 pt-20 md:pt-24 noise-texture">
-      {/* Background decoration - asymmetric layout */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-10 -left-20 w-72 h-72 bg-coral-200/25 rounded-full blur-3xl" />
-        <div className="absolute bottom-40 -right-20 w-80 h-80 bg-primary-200/20 rounded-full blur-3xl" />
-        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-secondary-200/15 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-1/3 w-48 h-48 bg-coral-100/20 rounded-full blur-2xl" />
+    <section className="relative min-h-[500px] md:min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
+      {/* 背景画像 */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/easy-publish/hero.jpeg"
+          alt="スマホから広告が飛び出すイメージ"
+          fill
+          quality={90}
+          className="object-cover object-center"
+          priority
+        />
+        {/* オーバーレイ - テキストの可読性を確保 */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-white/70 to-white/90" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10 py-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          {/* Left content */}
-          <div className="flex-1 text-center lg:text-left">
+        <div className="flex flex-col items-center gap-8">
+          {/* Text content - センター配置 */}
+          <div className="text-center max-w-3xl">
             {/* バッジ */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 border border-coral-200 rounded-full mb-6 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 border border-coral-200 rounded-full mb-6 shadow-sm backdrop-blur-sm">
               <span className="w-2 h-2 bg-coral-500 rounded-full" />
               <span className="text-coral-600 text-sm font-medium">はじめての広告</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4 md:mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4 md:mb-6 leading-tight drop-shadow-sm">
               {hero.catchphrase.split("\n").map((line, i) => (
                 <span key={i} className="block">
                   {i === 0 ? (
@@ -58,16 +64,16 @@ export function Hero() {
               ))}
             </h1>
 
-            <p className="text-xl sm:text-2xl md:text-3xl text-coral-600 font-semibold mb-6 md:mb-8">
+            <p className="text-xl sm:text-2xl md:text-3xl text-coral-600 font-semibold mb-6 md:mb-8 drop-shadow-sm">
               {hero.subCatchphrase}
             </p>
 
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 md:mb-10 whitespace-pre-line">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-8 whitespace-pre-line">
               {hero.description}
             </p>
 
-            {/* CTAボタン - より目立つデザイン */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+            {/* CTAボタン */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button
                 variant="primary"
                 size="lg"
@@ -85,68 +91,46 @@ export function Hero() {
                 variant="outline"
                 size="lg"
                 onClick={() => scrollToSection("solution")}
-                className="text-lg"
+                className="text-lg bg-white/80 backdrop-blur-sm"
               >
                 {hero.cta.secondary}
               </Button>
             </div>
 
-            {/* 大きな数字で実績表示 */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {trustStats.map((stat, index) => (
-                <div key={index} className="text-center bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-coral-100 shadow-sm">
-                  <div className="flex items-baseline justify-center gap-0.5">
-                    <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-coral-600">
-                      {stat.value}
-                    </span>
-                    {stat.unit && (
-                      <span className="text-lg md:text-xl font-semibold text-coral-500">
-                        {stat.unit}
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-sm font-medium text-gray-700 mt-1">{stat.label}</p>
-                  {stat.sublabel && (
-                    <p className="text-xs text-gray-500">{stat.sublabel}</p>
-                  )}
-                </div>
-              ))}
+            {/* フローティングバッジ */}
+            <div className="inline-flex items-center gap-3 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg px-6 py-4 border border-coral-100">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-coral-400 to-primary-400 flex items-center justify-center">
+                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div className="text-left">
+                <p className="text-xs text-gray-500">初めてでも安心</p>
+                <p className="text-sm font-bold text-gray-800">専任サポート付き</p>
+              </div>
             </div>
           </div>
 
-          {/* Right image - 人物写真プレースホルダー */}
-          <div className="flex-1 flex justify-center w-full lg:w-auto">
-            <div className="relative w-full max-w-[320px] sm:max-w-sm md:max-w-md">
-              {/* 背景装飾 */}
-              <div className="absolute inset-0 bg-gradient-to-br from-coral-300/30 via-primary-300/20 to-secondary-300/20 rounded-3xl blur-2xl" />
-
-              {/* 人物写真コンテナ */}
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border-4 border-white shadow-2xl">
-                <Image
-                  src="/people/trouble_women.png"
-                  alt="広告に悩む女性"
-                  width={400}
-                  height={500}
-                  className="w-full h-full object-cover"
-                  priority
-                />
-              </div>
-
-              {/* フローティングバッジ */}
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-lg p-4 border border-coral-100">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-coral-400 to-primary-400 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500">初めてでも安心</p>
-                    <p className="text-sm font-bold text-gray-800">専任サポート付き</p>
-                  </div>
+          {/* 大きな数字で実績表示 */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-3xl">
+            {trustStats.map((stat, index) => (
+              <div key={index} className="text-center bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-coral-100 shadow-sm">
+                <div className="flex items-baseline justify-center gap-0.5">
+                  <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-coral-600">
+                    {stat.value}
+                  </span>
+                  {stat.unit && (
+                    <span className="text-lg md:text-xl font-semibold text-coral-500">
+                      {stat.unit}
+                    </span>
+                  )}
                 </div>
+                <p className="text-sm font-medium text-gray-700 mt-1">{stat.label}</p>
+                {stat.sublabel && (
+                  <p className="text-xs text-gray-500">{stat.sublabel}</p>
+                )}
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

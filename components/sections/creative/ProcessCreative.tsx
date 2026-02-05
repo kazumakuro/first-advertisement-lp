@@ -1,6 +1,7 @@
 "use client";
 
 import { process } from "@/config/content-creative";
+import Image from "next/image";
 
 const iconMap: Record<string, React.ReactNode> = {
   link: (
@@ -36,6 +37,19 @@ export function ProcessCreative() {
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             {process.subtitle}
           </p>
+        </div>
+
+        {/* プロセス変換イメージ */}
+        <div className="flex justify-center mb-12">
+          <div className="relative w-full max-w-2xl rounded-2xl overflow-hidden shadow-lg bg-rose-50">
+            <Image
+              src="/images/creative/process.jpeg"
+              alt="URLからクリエイティブへの変換プロセス"
+              width={800}
+              height={400}
+              className="w-full h-auto"
+            />
+          </div>
         </div>
 
         <div className="max-w-6xl mx-auto">

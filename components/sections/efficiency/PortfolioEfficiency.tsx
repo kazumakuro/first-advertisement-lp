@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { Section } from "@/components/ui/Section";
 import { trackExternalLink } from "@/lib/analytics";
+import Image from "next/image";
 
 // 埋め込みたい投稿のURLをここに追加
 const instagramPosts = [
@@ -42,6 +43,19 @@ export function PortfolioEfficiency() {
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
           実際に制作した広告クリエイティブをご覧ください
         </p>
+      </div>
+
+      {/* クリエイティブギャラリー画像 */}
+      <div className="flex justify-center mb-12">
+        <div className="relative w-full max-w-3xl rounded-lg overflow-hidden bg-dark-50">
+          <Image
+            src="/images/efficiency/gallery.jpeg"
+            alt="様々な広告クリエイティブのギャラリー"
+            width={900}
+            height={600}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
 
       {/* Instagram Embeds */}

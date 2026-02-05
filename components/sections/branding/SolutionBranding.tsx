@@ -1,6 +1,7 @@
 "use client";
 
 import { solution } from "@/config/content-branding";
+import Image from "next/image";
 
 const iconMap: Record<string, React.ReactNode> = {
   search: (
@@ -31,6 +32,19 @@ export function SolutionBranding() {
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             {solution.subtitle}
           </p>
+        </div>
+
+        {/* キーワード浮遊イメージ */}
+        <div className="flex justify-center mb-12">
+          <div className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-lg bg-orange-50">
+            <Image
+              src="/images/branding/keywords.jpeg"
+              alt="商品から魅力キーワードが浮かぶイメージ"
+              width={500}
+              height={350}
+              className="w-full h-auto"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">

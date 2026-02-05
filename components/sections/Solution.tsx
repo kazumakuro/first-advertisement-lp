@@ -3,6 +3,7 @@
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { solution } from "@/config/content";
+import Image from "next/image";
 
 const iconMap: Record<string, React.ReactNode> = {
   sparkles: (
@@ -41,13 +42,26 @@ export function Solution() {
   return (
     <Section id="solution" background="gradient">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
             {solution.title}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             {solution.subtitle}
           </p>
+        </div>
+
+        {/* フロー説明画像 */}
+        <div className="flex justify-center mb-12">
+          <div className="relative w-full max-w-2xl rounded-2xl overflow-hidden shadow-lg bg-cream-100">
+            <Image
+              src="/images/easy-publish/flow.jpeg"
+              alt="1万円から広告配信、成果へのフロー"
+              width={800}
+              height={400}
+              className="w-full h-auto"
+            />
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">

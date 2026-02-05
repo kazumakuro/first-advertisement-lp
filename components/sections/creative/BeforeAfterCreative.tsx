@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { beforeAfter } from "@/config/content-creative";
 import { trackBeforeAfterInteraction } from "@/lib/analytics";
+import Image from "next/image";
 
 export function BeforeAfterCreative() {
   const [activeCase, setActiveCase] = useState(0);
@@ -28,6 +29,19 @@ export function BeforeAfterCreative() {
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             {beforeAfter.subtitle}
           </p>
+        </div>
+
+        {/* Before/After 画像 */}
+        <div className="flex justify-center mb-12">
+          <div className="relative w-full max-w-2xl rounded-2xl overflow-hidden shadow-lg bg-white">
+            <Image
+              src="/images/creative/before-after.jpeg"
+              alt="商品写真から広告クリエイティブへの変換"
+              width={800}
+              height={450}
+              className="w-full h-auto"
+            />
+          </div>
         </div>
 
         <div className="max-w-5xl mx-auto">

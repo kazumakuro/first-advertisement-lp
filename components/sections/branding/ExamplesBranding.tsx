@@ -1,6 +1,7 @@
 "use client";
 
 import { examples } from "@/config/content-branding";
+import Image from "next/image";
 
 export function ExamplesBranding() {
   return (
@@ -13,6 +14,19 @@ export function ExamplesBranding() {
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             {examples.subtitle}
           </p>
+        </div>
+
+        {/* Before/After イメージ */}
+        <div className="flex justify-center mb-12">
+          <div className="relative w-full max-w-2xl rounded-2xl overflow-hidden shadow-lg bg-white">
+            <Image
+              src="/images/branding/before-after.jpeg"
+              alt="コピーライティングのBefore/After変換イメージ"
+              width={800}
+              height={450}
+              className="w-full h-auto"
+            />
+          </div>
         </div>
 
         <div className="max-w-5xl mx-auto space-y-8">
